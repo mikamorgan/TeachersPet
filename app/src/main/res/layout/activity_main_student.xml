@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_menu_bg"
+    tools:context=".Main_Menu_Student_View">
+
+    <Button
+        android:id="@+id/attendance"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        android:alpha="0"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="279dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/lessons"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        android:alpha="0"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendance" />
+
+    <Button
+        android:id="@+id/self_study"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        android:alpha="0"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessons" />
+
+    <Button
+        android:id="@+id/progress"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        android:alpha="0"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/self_study"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
