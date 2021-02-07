@@ -1,10 +1,5 @@
 package com.example.teacherspet.ui.login;
 
-import android.content.Intent;
-
-import com.example.teacherspet.Main_Menu_Student_View;
-import com.example.teacherspet.Progress;
-
 /**
  * Class exposing authenticated user details to the UI.
  */

@@ -10,17 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeachersPet">
         <activity
-            android:name=".Progress">
+            android:name=".Progress_Student_View">
 
             </activity>
         <activity
-            android:name=".Self_Study" >
+            android:name=".Self_Study_Student_View" >
 
             </activity>
         <activity
-            android:name=".Lessons" />
+            android:name=".Lessons_Student_View" />
         <activity
-            android:name=".Attendance" />
+            android:name=".Attendance_Student_View" />
         <activity
             android:name=".Main_Menu_Student_View" />
         <activity

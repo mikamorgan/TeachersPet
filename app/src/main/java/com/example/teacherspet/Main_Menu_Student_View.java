@@ -10,22 +10,22 @@ import android.widget.Button;
 public class Main_Menu_Student_View extends AppCompatActivity {
 
     public void openAttendance() {
-        Intent intent = new Intent(this, Attendance.class);
+        Intent intent = new Intent(this, Attendance_Student_View.class);
         startActivity(intent);
     }
 
     public void openLessons() {
-        Intent intent = new Intent(this, Lessons.class);
+        Intent intent = new Intent(this, Lessons_Student_View.class);
         startActivity(intent);
     }
 
     public void openSelf_Study() {
-        Intent intent = new Intent(this, Self_Study.class);
+        Intent intent = new Intent(this, Self_Study_Student_View.class);
         startActivity(intent);
     }
 
     public void openProgress() {
-        Intent intent = new Intent(this, Progress.class);
+        Intent intent = new Intent(this, Progress_Student_View.class);
         startActivity(intent);
     }
 
