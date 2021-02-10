@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.net.Credentials;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -32,6 +33,7 @@ import com.example.teacherspet.ui.login.LoginViewModelFactory;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    //Credentials credentials = new Credentials("Admin","12345");
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
