@@ -23,7 +23,7 @@ public class SC_Binary_Trees extends AppCompatActivity {
 
     private String answer;
     private int mscore = 0;
-    private int questionIndex = 2;
+    private int questionIndex = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

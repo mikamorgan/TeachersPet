@@ -12,27 +12,45 @@ public class QuestionBank {
     private String Questions [] = {
             //1044 Review Questions
             "What is the last index of an array with 5 items?",         //0
-            "Enter second question here",       //1
+            "What should the return type be of a print function?",      //1
+            "How do you check equality between two variables?",         //2
+            "What is the largest value you can hold in a byte?",        //3
+            "What could cause a run time error?",                       //4
+            "What is 14 % 3?",                                          //5
+            "How do you access the first element in an array?",         //6
+            "What data type should you use to hold a name?",            //7
+            "What should you use to repeat code 10 times?",             //8
+            "What is A && !A for any boolean A?",                       //9
+            "What should you use to traverse an array?",                //10
+            "What is T ^ T?",                                           //11
+            "How do you pass an argument to not change the original?",  //12
+            "What does a floating point data type contain?",            //13
+            "How do you print \"Hello World!\" in C++?",                //14
+            "How do you make single line comments in C++?",             //15
+            "How do you create a variable to hold a 6?",                //16
+            "Which header file lets us work with input and output objects?",//17
+            "How do you create a function in C++?",                     //18
+            "What statement is used to stop a loop?",                   //19
 
             //Binary Tree Questions
-            "How many children can a binary tree node have?",           //10
-            "What is the first node in a binary tree called?",          //11
-            "What are the final nodes in a binary tree called?",        //12
-            "Smaller values are inserted to the _______ in a BST.",//13
-            "Root -> Left -> Right is what kind of traversal?",         //14
-            "Left -> Root -> Right is what kind of traversal?",         //15
-            "Left -> Right -> Root is what kind of traversal?",         //16
-            "For n nodes, what is the max height of a binary tree?",    //17
-            "To be useful, binary trees should be _________.",          //18
-            "A binary tree where every node has 0 or 2 children.",      //19
-            "Every node has 2 children and all leaves on same level.",  //20
-            "A binary tree where every node has 1 child.",              //21
-            "All levels are full except last; leaves are left leaning", //22
-            "Total number of leaves in a full binary tree with n nodes",//23
-            "What kind of binary tree is used to implement heaps?",     //24
-            "What is the worst case complexity of Binary Search Tree?", //25
-            "What is the best case complexity of Binary Search Tree?",  //26
-            "Which of the following is not a self-balancing tree?",     //27
+            "How many children can a binary tree node have?",           //20
+            "What is the first node in a binary tree called?",          //21
+            "What are the final nodes in a binary tree called?",        //22
+            "Smaller values are inserted to the _______ in a BST.",     //23
+            "Root -> Left -> Right is what kind of traversal?",         //24
+            "Left -> Root -> Right is what kind of traversal?",         //25
+            "Left -> Right -> Root is what kind of traversal?",         //26
+            "For n nodes, what is the max height of a binary tree?",    //27
+            "To be useful, binary trees should be _________.",          //28
+            "A binary tree where every node has 0 or 2 children.",      //29
+            "Every node has 2 children and all leaves on same level.",  //30
+            "A binary tree where every node has 1 child.",              //31
+            "All levels are full except last; leaves are left leaning", //32
+            "Total number of leaves in a full binary tree with n nodes",//33
+            "What kind of binary tree is used to implement heaps?",     //34
+            "What is the worst case complexity of Binary Search Tree?", //35
+            "What is the best case complexity of Binary Search Tree?",  //36
+            "Which of the following is not a self-balancing tree?",     //37
 
 
             //Search & Sort Algorithms Questions
@@ -64,28 +82,46 @@ public class QuestionBank {
      ************************************************/
     private String Answers [][] = {
             //1044 Review Answers
-            {"0", "4", "5", "6"},       //0
-            {"Choice A", "Choice B", "Choice C", "Choice D"},       //1
+            {"0", "4", "5", "6"},                                   //0
+            {"int", "String", "cout", "void"},                      //1
+            {"==", "equals", "=", "check name"},                    //2
+            {"8", "1", "255", "127"},                               //3
+            {"forget semicolon", "forget curly brace", "divide by 0", "use wrong name"}, //4
+            {"2", "3", "4", "0"},                                   //5
+            {"arr[1]", "arr.first", "arr[0]", "arr.1"},             //6
+            {"variable", "int", "char", "string"},                  //7
+            {"for", "while", "if", "switch"},                       //8
+            {"true", "A", "false", "!A"},                           //9
+            {"while", "arr.next", "for", "pointers"},               //10
+            {"true", "false", "input", "not enough info"},          //11
+            {"pass by value", "pass by reference", "pointer", "alias"}, //12
+            {"whole part only", "decimal part only", "whole and decimal", "negatives only"}, //13
+            {"print(\"Hello World\");", "Console.WriteLine(\"Hello World\");", "cout << \"Hello World\";", "System.out.print(\"Hello World\");"},
+            {"//", "/* */", "#", "!"},                              //15
+            {"int x = 6", "num x = 6", "double x = 6", "int x == 6"},//16
+            {"#include<iostring>", "#include<stream>", "#include<inputstr>", "#include<iostream>"},//17
+            {"functionName()", "functionName.", "functionName = ", "functionName[]"},//18
+            {"exit", "stop", "break", "return"},                    //19
 
             //Binary Tree Answers
-            {"2", "1", "0", "Any #"},                               //10
-            {"First", "Root", "Leaf", "Child"},                     //11
-            {"Parents", "Roots", "Right", "Leaves"},                //12
-            {"Front", "Right", "Left", "Back"},                     //13
-            {"Inorder", "Postorder", "Preorder", "Natural"},        //14
-            {"Inorder", "Postorder", "Preorder", "Natural"},        //15
-            {"Inorder", "Postorder", "Preorder", "Natural"},        //16
-            {"n", "n^2", "n/2", "log2(n)"},                         //17
-            {"Balanced", "Alphabetical", "Random", "Skewed"},       //18
-            {"Complete", "Full", "Perfect", "Degenerate"},          //19
-            {"Complete", "Full", "Perfect", "Degenerate"},          //20
-            {"Complete", "Full", "Perfect", "Degenerate"},          //21
-            {"Complete", "Full", "Perfect", "Degenerate"},          //22
-            {"n", "n/2", "(n+1)/2", "log2(n)"},                     //23
-            {"Complete", "Full", "Perfect", "Degenerate"},          //24
-            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},       //25
-            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},       //26
-            {"AVL", "B-Tree", "Red-Black", "BST"},                  //27
+            {"2", "1", "0", "Any #"},                               //20
+            {"First", "Root", "Leaf", "Child"},                     //21
+            {"Parents", "Roots", "Right", "Leaves"},                //22
+            {"Front", "Right", "Left", "Back"},                     //23
+            {"Inorder", "Postorder", "Preorder", "Natural"},        //24
+            {"Inorder", "Postorder", "Preorder", "Natural"},        //25
+            {"Inorder", "Postorder", "Preorder", "Natural"},        //26
+            {"n", "n^2", "n/2", "log2(n)"},                         //27
+            {"Balanced", "Alphabetical", "Random", "Skewed"},       //28
+            {"Complete", "Full", "Perfect", "Degenerate"},          //29
+            {"Complete", "Full", "Perfect", "Degenerate"},          //30
+            {"Complete", "Full", "Perfect", "Degenerate"},          //31
+            {"Complete", "Full", "Perfect", "Degenerate"},          //32
+            {"n", "n/2", "(n+1)/2", "log2(n)"},                     //33
+            {"Complete", "Full", "Perfect", "Degenerate"},          //34
+            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},       //35
+            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},       //36
+            {"AVL", "B-Tree", "Red-Black", "BST"},                  //37
 
 
             //Search & Sort Algorithms Answers
@@ -119,28 +155,46 @@ public class QuestionBank {
      *************************************************/
     private String CorrectAnswers [] = {
             //1044 Review Correct Answers
-            "4",       //0
-            "Choice D",       //1
+            "4",            //0
+            "void",         //1
+            "==",           //2
+            "255",          //3
+            "divide by 0",  //4
+            "2",            //5
+            "arr[0]",       //6
+            "string",       //7
+            "for",          //8
+            "false",        //9
+            "for",          //10
+            "false",        //11
+            "pass by value",//12
+            "whole and decimal",//13
+            "cout << \"Hello World\";",//14
+            "//",           //15
+            "int x = 6",    //16
+            "#include<iostream>",//17
+            "functionName()",//18
+            "break",        //19
 
             //Binary Tree Correct Answers
-            "2",            //10
-            "Root",         //11
-            "Leaves",       //12
-            "Left",         //13
-            "Preorder",     //14
-            "Inorder",      //15
-            "Postorder",    //16
-            "log2(n)",      //17
-            "Balanced",     //18
-            "Full",         //19
-            "Perfect",      //20
-            "Degenerate",   //21
-            "Complete",     //22
-            "(n+1)/2",      //23
-            "Complete",     //24
-            "O(n)",         //25
-            "O(log2(n))",    //26
-            "BST",          //27
+            "2",            //20
+            "Root",         //21
+            "Leaves",       //22
+            "Left",         //23
+            "Preorder",     //24
+            "Inorder",      //25
+            "Postorder",    //26
+            "log2(n)",      //27
+            "Balanced",     //28
+            "Full",         //29
+            "Perfect",      //30
+            "Degenerate",   //31
+            "Complete",     //32
+            "(n+1)/2",      //33
+            "Complete",     //34
+            "O(n)",         //35
+            "O(log2(n))",   //36
+            "BST",          //37
 
             //Search & Sort Algorithms Correct Answers
             "Choice C",       //4
