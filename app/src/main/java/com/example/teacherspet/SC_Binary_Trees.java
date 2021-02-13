@@ -86,9 +86,9 @@ public class SC_Binary_Trees extends AppCompatActivity {
     private void updateQuestions(){
         mquestionView.setText(questionBank.getQuestion(questionIndex));
         mchoice1.setText(questionBank.getChoice1(questionIndex));
-        mchoice2.setText(questionBank.getChoice1(questionIndex));
-        mchoice3.setText(questionBank.getChoice1(questionIndex));
-        mchoice4.setText(questionBank.getChoice1(questionIndex));
+        mchoice2.setText(questionBank.getChoice2(questionIndex));
+        mchoice3.setText(questionBank.getChoice3(questionIndex));
+        mchoice4.setText(questionBank.getChoice4(questionIndex));
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;

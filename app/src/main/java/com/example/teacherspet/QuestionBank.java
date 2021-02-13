@@ -139,7 +139,7 @@ public class QuestionBank {
             "(n+1)/2",      //23
             "Complete",     //24
             "O(n)",         //25
-            "O(log(n))",    //26
+            "O(log2(n))",    //26
             "BST",          //27
 
             //Search & Sort Algorithms Correct Answers
