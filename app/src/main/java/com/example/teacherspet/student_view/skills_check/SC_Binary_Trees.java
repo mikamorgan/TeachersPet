@@ -1,4 +1,4 @@
-package com.example.teacherspet;
+package com.example.teacherspet.student_view.skills_check;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.teacherspet.R;
 
 public class SC_Binary_Trees extends AppCompatActivity {
 

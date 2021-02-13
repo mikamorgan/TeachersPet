@@ -1,9 +1,15 @@
-package com.example.teacherspet;
+package com.example.teacherspet.teacher_view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.teacherspet.R;
+import com.example.teacherspet.student_view.Attendance_Student_View;
+import com.example.teacherspet.student_view.Lessons_Student_View;
+import com.example.teacherspet.student_view.Progress_Student_View;
+import com.example.teacherspet.student_view.Self_Study_Student_View;
 
 public class Main_Menu_Teacher_View extends AppCompatActivity {
 

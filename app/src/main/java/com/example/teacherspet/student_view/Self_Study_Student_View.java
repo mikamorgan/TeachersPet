@@ -1,4 +1,4 @@
-package com.example.teacherspet;
+package com.example.teacherspet.student_view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.example.teacherspet.R;
+import com.example.teacherspet.student_view.skills_check.SC_Algorithms;
+import com.example.teacherspet.student_view.skills_check.SC_Binary_Trees;
+import com.example.teacherspet.student_view.skills_check.SC_Lists;
+import com.example.teacherspet.student_view.skills_check.SC_Pointers;
+import com.example.teacherspet.student_view.skills_check.SC_Recursion;
+import com.example.teacherspet.student_view.skills_check.SC_Review;
+import com.example.teacherspet.student_view.skills_check.SC_Stacks;
 
 public class Self_Study_Student_View extends AppCompatActivity {
 

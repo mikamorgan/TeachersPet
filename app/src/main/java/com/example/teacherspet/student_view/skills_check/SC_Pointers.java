@@ -1,8 +1,10 @@
-package com.example.teacherspet;
+package com.example.teacherspet.student_view.skills_check;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.teacherspet.R;
 
 public class SC_Pointers extends AppCompatActivity {
 

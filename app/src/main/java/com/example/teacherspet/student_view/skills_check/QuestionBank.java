@@ -1,4 +1,4 @@
-package com.example.teacherspet;
+package com.example.teacherspet.student_view.skills_check;
 
 public class QuestionBank {
 

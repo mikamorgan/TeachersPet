@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SC_Stacks">
+    tools:context=".student_view.skills_check.SC_Stacks">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

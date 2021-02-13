@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SC_Pointers">
+    tools:context=".student_view.skills_check.SC_Pointers">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
