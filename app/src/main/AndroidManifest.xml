@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TeachersPet">
-        <activity android:name=".student_view.skills_check.SC_Stacks"></activity>
+        <activity android:name=".student_view.lessons.L_Stacks"></activity>
+        <activity android:name=".student_view.lessons.L_Review" />
+        <activity android:name=".student_view.lessons.L_Recursion" />
+        <activity android:name=".student_view.lessons.L_Pointers" />
+        <activity android:name=".student_view.lessons.L_Lists" />
+        <activity android:name=".student_view.lessons.L_Binary_Trees" />
+        <activity android:name=".student_view.lessons.L_Algorithms" />
+        <activity android:name=".student_view.skills_check.SC_Stacks" />
         <activity android:name=".student_view.skills_check.SC_Lists" />
         <activity android:name=".student_view.skills_check.SC_Pointers" />
         <activity android:name=".student_view.skills_check.SC_Algorithms" />

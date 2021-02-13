@@ -52,7 +52,7 @@
         android:id="@+id/choice1"
         android:layout_width="335dp"
         android:layout_height="64dp"
-        android:text="igv"
+        android:text=""
         app:backgroundTint="@color/Clear"
         android:textColor="@color/black"
         android:textSize="20sp"
