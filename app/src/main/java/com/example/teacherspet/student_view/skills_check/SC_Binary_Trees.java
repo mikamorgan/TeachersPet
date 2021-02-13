@@ -22,7 +22,7 @@ public class SC_Binary_Trees extends AppCompatActivity {
     private Button mchoice4;
 
     private String answer;
-    private int score = 0;
+    private int mscore = 0;
     private int questionIndex = 2;
 
     @Override
@@ -30,7 +30,7 @@ public class SC_Binary_Trees extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_c__binary__trees);
 
-        mscoreView = (TextView) findViewById(score);
+        mscoreView = (TextView) findViewById(R.id.score);
         mquestionView = (TextView) findViewById(R.id.question);
         mchoice1 = (Button) findViewById(R.id.choice1);
         mchoice2 = (Button) findViewById(R.id.choice2);
@@ -43,7 +43,8 @@ public class SC_Binary_Trees extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mchoice1.getText() == answer) {
-                    score++;
+                    mscore++;
+                    updateScore(mscore);
                     Toast.makeText(SC_Binary_Trees.this, "CORRECT!", Toast.LENGTH_SHORT);
                     updateQuestions();
                 }
@@ -54,7 +55,8 @@ public class SC_Binary_Trees extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mchoice2.getText() == answer) {
-                    score++;
+                    mscore++;
+                    updateScore(mscore);
                     Toast.makeText(SC_Binary_Trees.this, "CORRECT!", Toast.LENGTH_SHORT);
                     updateQuestions();
                 }
@@ -65,7 +67,8 @@ public class SC_Binary_Trees extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mchoice3.getText() == answer) {
-                    score++;
+                    mscore++;
+                    updateScore(mscore);
                     Toast.makeText(SC_Binary_Trees.this, "CORRECT!", Toast.LENGTH_SHORT);
                     updateQuestions();
                 }
@@ -76,13 +79,18 @@ public class SC_Binary_Trees extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mchoice4.getText() == answer) {
-                    score++;
+                    mscore++;
+                    updateScore(mscore);
                     Toast.makeText(SC_Binary_Trees.this, "CORRECT!", Toast.LENGTH_SHORT);
                     updateQuestions();
                 }
             }
         });
 
+    }
+
+    private void updateScore(int point){
+        mscoreView.setText("" + point);
     }
 
     private void updateQuestions(){
