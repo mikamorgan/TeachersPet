@@ -22,7 +22,7 @@ public class EmailVerify extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_verify);
-        final Button emailverifyButton = findViewById(R.id.signup); // inside on create
+        final Button emailverifyButton = findViewById(R.id.emailverifybutton); // inside on create
 
         // if the emailverify button is clicked it calls the open sign up  method page
         emailverifyButton.setOnClickListener(new View.OnClickListener() {
