@@ -82,7 +82,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signup"
         android:layout_width="85dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/forgetpsw"
         android:layout_width="186dp"
         android:layout_height="46dp"
         android:layout_marginStart="64dp"

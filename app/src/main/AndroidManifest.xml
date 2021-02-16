@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TeachersPet">
-        <activity android:name=".ui.login.SignUpUserView"></activity>
+        <activity android:name=".ui.login.EmailVerify"></activity>
+        <activity android:name=".ui.login.SignUpUserView" />
         <activity android:name=".student_view.lessons.L_Stacks" />
         <activity android:name=".student_view.lessons.L_Review" />
         <activity android:name=".student_view.lessons.L_Recursion" />
