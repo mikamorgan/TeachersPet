@@ -54,16 +54,39 @@ public class QuestionBank {
 
 
             //Search & Sort Algorithms Questions
-            "Enter second question here",       //4
-            "Enter second question here",       //5
+            "What is O(n) of linear search?",                           //38
+            "What is O(n) of merge sort?",                              //39
+            "What is O(n) of binary search?",                           //40
+            "Which of these sort algorithms is not stable?",            //41
+            "Which sort moves the largest item to the far right each pass?",//42
+            "What must be true for binary search to work?",             //43
+            "Which of these sorts does not have O(n^2) time complexity?",//44
+            "Which of these sorts makes the least amount of swaps?",    //45
+            "Which of these sorts partitions data around a pivot?",     //46
+            "What is the best time complexity of bubble sort?",         //47
+            "Search algorithms typically return the:",                  //48
+            "What does a search typically return if the value was not found?",//49
+            "Why might you use an O(n^2) sort?",                        //50
+            "Which algorithm can sort data dynamically as it comes in?",//51
+            "What is a disadvantage of insertion sort?",                //52
+            "What is needed to perform a data swap?",                   //53
+            "[2, 8, 4, 1, 3] What is result after Bubble sort first pass?",//54
+            "What does Big O tell us about an algorithm?",              //55
+            "What does the n in Big O notation represent?",             //56
+            "Order these complexities from least to greatest:",         //57
 
             //Pointers Questions
             "Enter second question here",       //6
             "Enter second question here",       //7
 
             //Recursion Questions
-            "Enter second question here",       //8
-            "Enter second question here",       //9
+            "A recursive function:",       //8
+            "What terminates recursion?",       //9
+            "Tail recursion:",
+            "How do you avoid infinite recursion?",
+            "Which is true about recursion compared to iteration?",
+            "What is a common application of recursion?",
+            "Common programming tool used in recursive functions:",
 
             //Linked Lists Questions
             "Enter second question here",       //10
@@ -125,16 +148,39 @@ public class QuestionBank {
 
 
             //Search & Sort Algorithms Answers
-            {"Choice A", "Choice B", "Choice C", "Choice D"},       //4
-            {"Choice A", "Choice B", "Choice C", "Choice D"},       //5
+            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},
+            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},
+            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},       //5
+            {"Insertion sort", "Merge sort", "Quick sort", "Bubble sort"},
+            {"Insertion sort", "Merge sort", "Quick sort", "Bubble sort"},
+            {"Cannot have over 100 items", "Data must be sorted", "Data must be stored in a stack", "Cannot have over 1000 items"},
+            {"Bubble sort", "Selection sort", "Insertion sort", "Quick sort"},
+            {"Heap sort", "Selection sort", "Insertion sort", "Merge sort"},
+            {"Insertion sort", "Merge sort", "Quick sort", "Bubble sort"},
+            {"O(log2(n))", "O(n^2)", "O(n)", "O(n log2(n))"},
+            {"Data found", "Data found index", "True or False if found", "No return"},
+            {"-1", "False", "Error", "0"},
+            {"Fastest sorts", "Use least memory", "Small data set", "You will use data repeatedly"},
+            {"Insertion sort", "Merge sort", "Quick sort", "Bubble sort"},
+            {"Choosing a bad partition", "Most inefficient sort", "Lots of data shuffling", "Most complicated to write"},
+            {"Pointer", "Linked list", "Temp variable", "Binary tree"},
+            {"[1, 2, 8, 4, 3]", "[2, 8, 4, 1, 3]", "[1, 2, 3, 4, 8]", "[2, 4, 1, 3, 8]"},
+            {"Number of operations made", "Time in seconds to sort data", "Address where data is in memory", "Difficulty to code"},
+            {"Notation", "Time in seconds", "Input size", "Number of swaps made"},
+            {"O(n), O(n^2), O(1), O(log(n))", "O(1), O(n^2), O(n), O(log(n))", "O(n), O(log(n), O(n^2), O(1))", "O(1), O(log(n)), O(n), O(n^2)"},
 
             //Pointers Answers
-            {"Choice A", "Choice B", "Choice C", "Choice D"},       //6
+            {"Loops forever", "Needs a for loop", "Calls itself", "Should be avoided"},       //6
             {"Choice A", "Choice B", "Choice C", "Choice D"},       //7
 
             //Recursion Answers
-            {"Choice A", "Choice B", "Choice C", "Choice D"},       //8
-            {"Choice A", "Choice B", "Choice C", "Choice D"},       //9
+            {"Loops forever", "Needs a for loop", "Calls itself", "Should be avoided"},       //8
+            {"Base case", "Divide and conquer", "Last line of code", "Becomes negative"},       //9
+            {"Void result", "Feeds back up", "Same as non-tail", "Returns directly"},
+            {"Use for loop", "Approach base case", "Break statements", "Default case"},
+            {"Recursion is slower", "Recursion uses more memory", "Both true", "Neither true"},
+            {"Graph and tree traversal", "Multiplication", "Linked lists", "Embedded systems"},
+            {"While loops", "For loops", "If-else statements", "Switch cases"},
 
             //Linked Lists Answers
             {"Choice A", "Choice B", "Choice C", "Choice D"},       //10
@@ -197,16 +243,38 @@ public class QuestionBank {
             "BST",          //37
 
             //Search & Sort Algorithms Correct Answers
-            "Choice C",       //4
-            "Choice A",       //5
+            "O(n)",       //4
+            "O(n log2(n))",
+            "O(log2(n))", //5
+            "Quick sort",
+            "Bubble sort",
+            "Data must be sorted",
+            "Quick sort",
+            "Selection sort",
+            "Quick sort",
+            "O(n)",
+            "Data found index",
+            "-1",
+            "Small data set",
+            "Insertion sort",
+            "Lots of data shuffling",
+            "Temp variable",
+            "[2, 4, 1, 3, 8]",
+            "Number of operations made",
+            "O(1), O(log(n)), O(n), O(n^2)",
 
             //Pointers Correct Answers
             "Choice D",       //6
             "Choice C",       //7
 
             //Recursion Correct Answers
-            "Choice C",       //8
-            "Choice A",       //9
+            "Calls itself",       //8
+            "Base case",       //9
+            "Returns directly",
+            "Approach base case",
+            "Both true",
+            "Graph and tree traversal",
+            "If-else statements",
 
             //Linked Lists Correct Answers
             "Choice B",       //10
