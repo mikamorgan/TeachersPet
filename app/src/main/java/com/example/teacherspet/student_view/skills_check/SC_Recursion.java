@@ -207,5 +207,10 @@ public class SC_Recursion extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of recursion questions, start over
+        if(questionIndex > 66) {
+            questionIndex = 60;
+        }
     }
 }

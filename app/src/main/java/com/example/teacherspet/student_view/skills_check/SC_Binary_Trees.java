@@ -207,5 +207,10 @@ public class SC_Binary_Trees extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of binary tree questions, start over
+        if(questionIndex > 37) {
+            questionIndex = 20;
+        }
     }
 }

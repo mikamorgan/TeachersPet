@@ -207,5 +207,10 @@ public class SC_Stacks extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of stacks questions, start over
+        if(questionIndex > 70) {
+            questionIndex = 69;
+        }
     }
 }

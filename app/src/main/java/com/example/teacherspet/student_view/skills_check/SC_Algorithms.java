@@ -207,5 +207,10 @@ public class SC_Algorithms extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of algorithm questions, start over
+        if(questionIndex > 57) {
+            questionIndex = 38;
+        }
     }
 }

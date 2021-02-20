@@ -207,5 +207,10 @@ public class SC_Pointers extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of pointers questions, start over
+        if(questionIndex > 59) {
+            questionIndex = 58;
+        }
     }
 }

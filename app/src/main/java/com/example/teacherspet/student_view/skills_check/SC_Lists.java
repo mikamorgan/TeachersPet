@@ -207,5 +207,10 @@ public class SC_Lists extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of list questions, start over
+        if(questionIndex > 68) {
+            questionIndex = 67;
+        }
     }
 }

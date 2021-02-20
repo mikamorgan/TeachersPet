@@ -206,5 +206,10 @@ public class SC_Review extends AppCompatActivity {
 
         answer = questionBank.getCorrectAnswer(questionIndex);
         questionIndex++;
+
+        //If you reach the end of 1044 review questions, start over
+        if(questionIndex > 19) {
+            questionIndex = 0;
+        }
     }
 }
