@@ -16,6 +16,12 @@ import com.example.teacherspet.data.LoginRepository;
 import com.example.teacherspet.data.Result;
 import com.example.teacherspet.data.model.LoggedInUser;
 
+//User is superclass that gets extended to student and teacher subclasses
+
+/********************************************************
+ * TODO: Add user credentials to LoginRepository
+ *******************************************************/
+
 public class User {
 
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
@@ -34,6 +40,7 @@ public class User {
         return loginResult;
     }
 
+    //Default user constructor
     public User(){
         String username;
         String password;
@@ -41,6 +48,8 @@ public class User {
         String name;
         String profile_picture_address;
     }
+
+    //Funtion to check login result against credentials stored in login repository
     public void login(String username, String password) {
         // can be launched in a separate asynchronous job
         Result<LoggedInUser> result = loginRepository.login(username, password);
