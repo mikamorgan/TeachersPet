@@ -1,7 +1,20 @@
 package com.example.teacherspet.student_view.lessons;
+/************************************************************************
+ * IMPORTS :
+ *          imports the classes for the Lesson student view page and the
+ *          bundle packages for the buttons UI interaction of the app.
+ *
 
+ ************************************************************************/
 import androidx.appcompat.app.AppCompatActivity;
 
+/************************************************************************
+ * IMPORTS :
+ *          imports the classes for the student view lessons page and the
+ *          bundle packages for the buttons UI interaction of the app.
+ *
+
+ ************************************************************************/
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;

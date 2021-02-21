@@ -1,5 +1,12 @@
 package com.example.teacherspet.ui.login;
+/************************************************************************
+ * IMPORTS :
+ *          imports the classes for the Login Repository and Login Data
+ *          Source and the bundle packages for the buttons UI interaction
+ *          and Libraries for collecting live data and no data for the app.
+ *
 
+ ************************************************************************/
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.annotation.NonNull;

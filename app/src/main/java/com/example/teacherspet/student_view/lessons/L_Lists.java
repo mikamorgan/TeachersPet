@@ -1,5 +1,11 @@
 package com.example.teacherspet.student_view.lessons;
+/************************************************************************
+ * IMPORTS :
+ *          imports the bundle packages for the buttons UI interaction
+ *          of the app.
+ *
 
+ ************************************************************************/
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
