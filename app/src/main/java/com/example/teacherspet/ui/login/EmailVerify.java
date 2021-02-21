@@ -10,6 +10,23 @@ import android.widget.Button;
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.Main_Menu_Student_View;
 
+
+
+
+/************************************************
+ * TODO: add encryption
+ *
+
+ ************************************************/
+
+/*************************************************
+ *
+ ************************************************/
+
+/**************************************************************
+ *
+
+ ****************************************************************/
 public class EmailVerify extends AppCompatActivity {
     void openMain(){
         Intent intent = new Intent(this, Main_Menu_Student_View.class);

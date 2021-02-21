@@ -24,7 +24,17 @@ import com.example.teacherspet.student_view.skills_check.SC_Review;
 import com.example.teacherspet.student_view.skills_check.SC_Stacks;
 
 public class Lessons_Student_View extends AppCompatActivity {
-
+    /**
+     * This class is for student view. It links the individual
+     * lesson plan buttons to their pages. There are 7 Topics that
+     * are covered and each topic has their own page.
+     */
+    /*************************************************************
+     * This method is called when the corresponding button is pressed.
+     * The application is
+     *
+     * ***********************************************************
+     */
     public void openAlgorithms() {
         Intent intent = new Intent(this, L_Algorithms.class);
         startActivity(intent);
