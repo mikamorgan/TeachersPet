@@ -14,10 +14,12 @@ import androidx.annotation.NonNull;
 import com.example.teacherspet.data.LoginDataSource;
 import com.example.teacherspet.data.LoginRepository;
 
-/**
+/***************************************************************************
  * ViewModel provider factory to instantiate LoginViewModel.
  * Required given LoginViewModel has a non-empty constructor
- */
+ *
+ * This is a default part of the login template provided by Android Studio
+ **************************************************************************/
 public class LoginViewModelFactory implements ViewModelProvider.Factory {
 
     @NonNull
