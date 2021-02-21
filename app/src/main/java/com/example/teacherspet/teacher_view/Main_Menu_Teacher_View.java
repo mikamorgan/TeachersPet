@@ -13,6 +13,19 @@ import com.example.teacherspet.student_view.Self_Study_Student_View;
 
 public class Main_Menu_Teacher_View extends AppCompatActivity {
 
+    /************************************************************************
+     * TODO: Create activity pages for all teacher view functions
+     * TODO: Update button links to navigate to teacher view pages
+     * TODO: Add option to select course (separate activity page?)
+     * TODO: Create four buttons for each functionality
+     *
+     * OPTIONAL EXTRAS:
+     * TODO: Link the teacher's profile picture
+     * (right now a default avatar displays in the top right)
+     * TODO: Display the teacher's name
+     * (right now there is a default name placeholder in the top right)
+     * TODO: Add a back button with functionality
+     ************************************************************************/
     public void openAttendance() {
         Intent intent = new Intent(this, Attendance_Student_View.class);
         startActivity(intent);
