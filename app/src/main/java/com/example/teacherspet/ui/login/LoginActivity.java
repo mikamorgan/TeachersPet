@@ -39,7 +39,10 @@ public class LoginActivity extends AppCompatActivity {
     private LoginViewModel loginViewModel;
     //Credentials credentials = new Credentials("Admin","12345");
 
-    // This opens the sign up activity
+    /******************************************************************
+     * This method is called when the corresponding button is pressed.
+     * The application navigates to the sign up page
+     ******************************************************************/
     public void openSignup() {
         Intent intent = new Intent(this, SignUpUserView.class);
         startActivity(intent);
@@ -48,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //Upon creation, make an instance of loginViewModel, and enable text entry fields and buttons
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
@@ -62,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         // Forget Password button
         final Button forgetpasswordButton = findViewById(R.id.forgetpsw);
 
+        //LoginFormState checks for any developer-set un or pw errors
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
@@ -78,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //getLoginResult returns true or false if login attempt was successful
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
@@ -85,9 +92,13 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
                 loadingProgressBar.setVisibility(View.GONE);
+
+                //if login fails, display error message
                 if (loginResult.getError() != null) {
                     showLoginFailed(loginResult.getError());
                 }
+
+                //if login successful, update UI with user information and navigate to main menu
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
                 }
@@ -98,6 +109,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //TextWatcher checks for user input in text entry fields
         TextWatcher afterTextChangedListener = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -115,6 +127,9 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         };
+
+        //On creation, allow the user to enter text for un and pw
+        //Hide pw text as it is entered. Only check for pw changes if login fails
         usernameEditText.addTextChangedListener(afterTextChangedListener);
         passwordEditText.addTextChangedListener(afterTextChangedListener);
         passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -129,6 +144,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        /****************************************************************************
+         *  OnClickListener checks to see if a button is pressed
+         *
+         *  If the button is pressed, check the login credentials
+         ***************************************************************************/
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,7 +158,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // if the sign up button is clicked it calls the open sign up  method page
+        /****************************************************************************
+         *  OnClickListener checks to see if a button is pressed
+         *
+         *  If the button is pressed, open the sign up activity page
+         ***************************************************************************/
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,14 +171,18 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    //If login successful, pull in user name and profile picture to update UI
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+
+        //If login successful, navigate to the main menu
+        //TODO: Navigate to student or teacher main menu, based on authorization
         Intent intent = new Intent(this, Main_Menu_Student_View.class);
         startActivity(intent);
     }
 
+    //Show error message if login failed
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }
