@@ -7,7 +7,6 @@ package com.example.teacherspet.ui.login;
  ************************************************************************/
 import androidx.annotation.Nullable;
 
-
 /***************************************************************
  * This class controls the Login Results to check if the user
  * entered the correct login information. It should check if the
