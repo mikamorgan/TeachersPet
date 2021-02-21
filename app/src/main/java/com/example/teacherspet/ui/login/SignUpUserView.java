@@ -16,7 +16,11 @@ import android.widget.Button;
 import com.example.teacherspet.R;
 
 public class SignUpUserView extends AppCompatActivity {
-    // This opens the email verification activity
+
+    /******************************************************************
+     * This method is called when the corresponding button is pressed.
+     * The application opens the email verification activity
+     ******************************************************************/
     public void openemailVerify() {
         Intent intent = new Intent(this, EmailVerify.class);
         startActivity(intent);
@@ -26,8 +30,14 @@ public class SignUpUserView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_user_view);
+
         final Button emailverifyButton = findViewById(R.id.signup); // inside on create
-        // if the sign up button is clicked it calls the open sign up  method page
+
+        /****************************************************************************
+         *  OnClickListener checks to see if a button is pressed
+         *
+         *  If the button is pressed, open the sign up  method page
+         ***************************************************************************/
         emailverifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

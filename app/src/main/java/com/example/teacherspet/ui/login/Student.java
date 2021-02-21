@@ -1,5 +1,10 @@
 package com.example.teacherspet.ui.login;
- // Students is a wonderful group of people
+ // Students is a subclass that inherits the user superclass
+
+/********************************************************
+ * TODO: Add student user credentials to LoginRepository
+ *******************************************************/
+
 public class Student extends User{
 
     public Student(){
