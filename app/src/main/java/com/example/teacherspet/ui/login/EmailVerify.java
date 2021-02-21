@@ -1,5 +1,11 @@
 package com.example.teacherspet.ui.login;
+/************************************************************************
+ * IMPORTS :
+ *          imports the classes for the Student View Main Menu pages and
+ *          the bundle packages for the buttons UI interaction of the app.
+ *
 
+ ************************************************************************/
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
