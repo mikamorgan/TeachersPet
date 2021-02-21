@@ -8,7 +8,11 @@ import com.example.teacherspet.R;
 
 public class L_Algorithms extends AppCompatActivity {
 
-
+    /************************************************************************
+     * TODO: Select external sources
+     * TODO: Create scrollable layout
+     * TODO: Add buttons and link external sites
+     ************************************************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
