@@ -17,6 +17,7 @@ public class Attendance_Student_View extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //When the activity is created, link to the scrollable XML layout file,attendance_student
         setContentView(R.layout.activity_attendance_student);
     }
 }
