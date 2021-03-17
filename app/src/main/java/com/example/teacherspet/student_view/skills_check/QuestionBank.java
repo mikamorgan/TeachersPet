@@ -118,6 +118,8 @@ public class QuestionBank {
             "How are the elements in a list linked?",                       //71
             "Can you create a doubly linked list using only one pointer with every node?",//72
             "What data structure does a circular linked list implement?",   //73
+            "Which is not a disadvantage of linked lists?",                 //74
+            "How can a linked list be implemented?",                        //75
 
             //Stacks/Queues Questions
             "Enter second question here",                                   //69
@@ -224,6 +226,8 @@ public class QuestionBank {
             {"Contiguous memory", "Boolean operations", "Offsets", "Pointers"},                 //71
             {"Not possible", "Yes, XOR current and next nodes", "Yes, XOR current and previous nodes", "Yes, XOR previous and next nodes"},//72
             {"Stack", "Queue", "Array", "Struct"},                                              //73
+            {"Random access is not allowed", "Extra memory needed for pointer", "Not cache friendly", "Fixed size"},//74
+            {"Class", "Struct", "Both of these", "Neither of these"},                           //75
 
             //Stacks/Queues Answers
             {"Choice A", "Choice B", "Choice C", "Choice D"},                                   //69
@@ -331,6 +335,8 @@ public class QuestionBank {
             "Pointers",                                 //71
             "Yes, XOR previous and next nodes",         //72
             "Queue",                                    //73
+            "Fixed size",                               //74
+            "Both of these",                            //75
 
             //Stacks/Queues Correct Answers
             "Choice D",                                 //69
