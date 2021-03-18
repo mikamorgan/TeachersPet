@@ -124,8 +124,15 @@ public class QuestionBank {
             "Common programming tool used in recursive functions:",         //66
 
             //Linked Lists Questions
-            "Enter second question here",                                   //67
-            "Enter second question here",                                   //68
+            "What is an advantage of linked lists over arrays?",            //67
+            "What is an advantage of arrays over linked lists?",            //68
+            "Which sort algorithm is impossible to sort a random linked list?",//69
+            "Which of these is not a type of linked list?",                 //70
+            "How are the elements in a list linked?",                       //71
+            "Can you create a doubly linked list using only one pointer with every node?",//72
+            "What data structure does a circular linked list implement?",   //73
+            "Which is not a disadvantage of linked lists?",                 //74
+            "How can a linked list be implemented?",                        //75
 
             //Stacks/Queues Questions
             "Enter second question here",                                   //69
@@ -238,8 +245,15 @@ public class QuestionBank {
             {"While loops", "For loops", "If-else statements", "Switch cases"},                 //66
 
             //Linked Lists Answers
-            {"Choice A", "Choice B", "Choice C", "Choice D"},                                   //67
-            {"Choice A", "Choice B", "Choice C", "Choice D"},                                   //68
+            {"It is faster to access elements in arrays", "Linked lists can change size", "It is faster to access elements in linked lists", "Arrays can change size"},  //67
+            {"It is faster to access elements in arrays", "Linked lists can change size", "It is faster to access elements in linked lists", "Arrays can change size"},  //68
+            {"Insertion Sort", "Quick Sort", "Heap Sort", "Merge Sort"},                        //69
+            {"Priority", "Singly", "Doubly", "Circular"},                                       //70
+            {"Contiguous memory", "Boolean operations", "Offsets", "Pointers"},                 //71
+            {"Not possible", "Yes, XOR current and next nodes", "Yes, XOR current and previous nodes", "Yes, XOR previous and next nodes"},//72
+            {"Stack", "Queue", "Array", "Struct"},                                              //73
+            {"Random access is not allowed", "Extra memory needed for pointer", "Not cache friendly", "Fixed size"},//74
+            {"Class", "Struct", "Both of these", "Neither of these"},                           //75
 
             //Stacks/Queues Answers
             {"Choice A", "Choice B", "Choice C", "Choice D"},                                   //69
@@ -353,8 +367,15 @@ public class QuestionBank {
             "If-else statements",                       //66
 
             //Linked Lists Correct Answers
-            "Choice B",                                 //67
-            "Choice B",                                 //68
+            "Linked lists can change size",             //67
+            "It is faster to access elements in arrays",//68
+            "Heap Sort",                                //69
+            "Priority",                                 //70
+            "Pointers",                                 //71
+            "Yes, XOR previous and next nodes",         //72
+            "Queue",                                    //73
+            "Fixed size",                               //74
+            "Both of these",                            //75
 
             //Stacks/Queues Correct Answers
             "Choice D",                                 //69
