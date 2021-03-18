@@ -98,8 +98,21 @@ public class QuestionBank {
             "Order these complexities from least to greatest:",             //57
 
             //Pointers Questions
-            "Enter second question here",                                   //58
-            "Enter second question here",                                   //59
+            "Why do we use pointers in C++?",                               //58
+            "How do you get the value stored in a pointer?",                //59
+            "\"int * number;\" means: ",                                    //60
+            "What is not a correct way to create a pointer?",               //61
+            "&name would return:",                                          //62
+            "\"int **num;\" would mean:",                                   //63
+            "Pointers operate the same as what data structure?",            //64
+            "Which is equivalent to a[5]?",                                 //65
+            "What does \"int * a, b, c;\" create?",                         //66
+            "What happens if you dereference a pointer without a valid target?",//67
+            "What is the only integer literal you can assign a pointer?",   //68
+            "You can assign one pointer to another only if:",               //69
+            "\"const int * num;\" is a:",                                   //70
+            "\"int const * num;\" is a:",                                   //71
+            "\"int * const num;\" is a:",                                   //72
 
             //Recursion Questions
             "A recursive function:",                                        //60
@@ -199,8 +212,21 @@ public class QuestionBank {
             {"O(n), O(n^2), O(1), O(log(n))", "O(1), O(n^2), O(n), O(log(n))", "O(n), O(log(n), O(n^2), O(1))", "O(1), O(log(n)), O(n), O(n^2)"},//57
 
             //Pointers Answers
-            {"Loops forever", "Needs a for loop", "Calls itself", "Should be avoided"},         //58
-            {"Choice A", "Choice B", "Choice C", "Choice D"},                                   //59
+            {"Allows functions to share variables", "To pass large structures", "To implement linked lists/binary trees", "All of the above"},         //58
+            {"Dereference Operator- *", "Dereference Operator- &", "Address Operator- *", "Address Operator- &"},//59
+            {"number holds an int", "number points to an int", "int is a pointer", "int is a number"},//60
+            {"int *num", "int* num", "int*num", "int num*"},                                    //61
+            {"The value in name", "Boolean AND with name", "The address of name", "If name is a pointer"}, //62
+            {"num is a pointer to a pointer", "num is a pointer to an int", "int points to num", "This would error"}, //63
+            {"Priority Queue", "Heap", "Array", "Stack"},                                       //64
+            {"a* 5", "a* + 5", "*(a+5)", "a(* 5)"},                                             //65
+            {"3 int pointers", "3 ints", "1 int pointer, 2 ints", "This would error"},          //66
+            {"Segmentation fault", "Program will crash", "Tries to access out of bounds memory", "All of the above"},//67
+            {"You can't assign any integers", "You can assign any integer you want", "0", "Only positive integers"},//68
+            {"They are the same data type", "They are in the same function", "They are both null", "Anytime"},//69
+            {"Non constant pointer to constant int", "Constant pointer to constant int", "Constant pointer to non constant int", "All of the above"},//70
+            {"Non constant pointer to constant int", "Constant pointer to constant int", "Constant pointer to non constant int", "All of the above"},//71
+            {"Non constant pointer to constant int", "Constant pointer to constant int", "Constant pointer to non constant int", "All of the above"},//72
 
             //Recursion Answers
             {"Loops forever", "Needs a for loop", "Calls itself", "Should be avoided"},         //60
@@ -301,8 +327,21 @@ public class QuestionBank {
             "O(1), O(log(n)), O(n), O(n^2)",            //57
 
             //Pointers Correct Answers
-            "Choice D",                                 //58
-            "Choice C",                                 //59
+            "All of the above",                         //58
+            "Dereference Operator- *",                  //59
+            "number points to an int",                  //60
+            "int num*",                                 //61
+            "The address of name",                      //62
+            "num is a pointer to a pointer",            //63
+            "Array",                                    //64
+            "*(a+5)",                                   //65
+            "1 int pointer, 2 ints",                    //66
+            "All of the above",                         //67
+            "0",                                        //68
+            "They are the same data type",              //69
+            "Non constant pointer to constant int",     //70
+            "Non constant pointer to constant int",     //71
+            "Constant pointer to non constant int",     //72
 
             //Recursion Correct Answers
             "Calls itself",                             //60
