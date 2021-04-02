@@ -37,7 +37,8 @@ import com.example.teacherspet.R;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
-    //Credentials credentials = new Credentials("Admin","12345");
+
+    UserLocalStore userLocalStore;
 
     /******************************************************************
      * This method is called when the corresponding button is pressed.
@@ -56,6 +57,8 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
+        userLocalStore = new UserLocalStore(this);
+
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
@@ -68,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         final Button forgetpasswordButton = findViewById(R.id.forgetpsw);
 
         //LoginFormState checks for any developer-set un or pw errors
-        loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
+        /*loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
                 if (loginFormState == null) {
@@ -143,6 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                 return false;
             }
         });
+        */
 
         /****************************************************************************
          *  OnClickListener checks to see if a button is pressed
