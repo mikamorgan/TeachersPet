@@ -10,11 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.teacherspet.R;
+import com.vishnusivadas.advanced_httpurlconnection.FetchData;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class SignUpUserView extends AppCompatActivity {
 
@@ -48,7 +52,7 @@ public class SignUpUserView extends AppCompatActivity {
 
         if (temp1.equals(temp2))
         {
-            password = temp1;
+           password = temp1;
         }
 
         User user = new User(email, password, name);
@@ -58,9 +62,39 @@ public class SignUpUserView extends AppCompatActivity {
          *
          *  If the button is pressed, open the sign up  method page
          ***************************************************************************/
+        String finalPassword = password;
         emailverifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //Start ProgressBar first (Set visibility VISIBLE)
+                Handler handler = new Handler(Looper.getMainLooper());
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Starting Write and Read data with URL
+                        //Creating array for parameters
+                        String[] field = new String[3];
+                        field[0] = "email";
+                        field[1] = "password";
+                        field[2] = "name";
+                        //Creating array for data
+                        String[] data = new String[3];
+                        data[0] = email;
+                        data[1] = finalPassword;
+                        data[2] = name;
+                        PutData putData = new PutData("192.168.1.138/LoginRegister/signup.php", "POST", field, data);
+                        if (putData.startPut()) {
+                            if (putData.onComplete()) {
+                                String result = putData.getResult();
+                                //End ProgressBar (Set visibility to GONE)
+                                //Log.i("PutData", result);
+                            }
+                        }
+                        //End Write and Read data with URL
+                    }
+                });
+
                 openemailVerify();
             }
         });
