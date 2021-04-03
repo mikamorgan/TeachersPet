@@ -105,9 +105,6 @@ public class EmailVerify extends AppCompatActivity {
         String name = getIntent().getStringExtra("name");
         String code = getIntent().getStringExtra("code");
 
-        Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
         //sendEmail(code);
 
         /****************************************************************************
