@@ -28,16 +28,7 @@ import java.util.Random;
 
 
 /*****************************************************************
- * TODO: Generate verification code
  * TODO: Send email to MSU D2L account used in account creation
- * TODO: Check verification code entered with code sent
- * TODO: IF the code's match, check if user already exists in DB
- * TODO: IF user does not already exist, create new user account
- * TODO: Check user email against 5 verified professor accounts
- * TODO: Assign authorization as student or teacher based on
- * email. Save this information in DB with user account.
- * TODO: Navigate to student OR teacher main menu screen, based on
- * student or teacher account designation
  ****************************************************************/
 
 
@@ -96,11 +87,6 @@ public class EmailVerify extends AppCompatActivity {
                     "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
 
-        //Intent intent = new Intent(this, EmailVerify.class);
-        //intent.putExtra("email", email);
-        //intent.putExtra("password", password);
-        //intent.putExtra("name", name);
-        //startActivity(intent);
     }
 
 
@@ -185,9 +171,6 @@ public class EmailVerify extends AppCompatActivity {
                             data[2] = name;
                             data[3] = finalClassification;
                             data[4] = "";
-                            //Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
-                            //Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
-                            //Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
 
                             PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                             if (putData.startPut()) {
