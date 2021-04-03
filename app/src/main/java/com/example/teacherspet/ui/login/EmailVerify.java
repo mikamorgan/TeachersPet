@@ -133,10 +133,41 @@ public class EmailVerify extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String enteredCode = usernameEditText.getText().toString();
+                String classification = "";
+
+                if(email.equals("catherine.stringfellow@msutexas.edu"))
+                {
+                    classification = "teacher";
+                }
+                else if(email.equals("nelson.passos@msutexas.edu"))
+                {
+                    classification = "teacher";
+                }
+                else if(email.equals("terry.griffin@msutexas.edu"))
+                {
+                    classification = "teacher";
+                }
+                else if(email.equals("tina.johnson@msutexas.edu"))
+                {
+                    classification = "teacher";
+                }
+                else if(email.equals("eduardo.colmenares-diaz@msutexas.edu"))
+                {
+                    classification = "teacher";
+                }
+                else if(email.equals("testTeacher@gmail.com"))
+                {
+                    classification = "teacher";
+                }
+                else
+                {
+                    classification = "student";
+                }
                 //if(enteredCode.equals("" + code))
                 //{
                     Handler handler = new Handler(Looper.getMainLooper());
-                    handler.post(new Runnable() {
+                String finalClassification = classification;
+                handler.post(new Runnable() {
                         @Override
                         public void run() {
                             //Starting Write and Read data with URL
@@ -152,11 +183,11 @@ public class EmailVerify extends AppCompatActivity {
                             data[0] = email;
                             data[1] = finalPassword;
                             data[2] = name;
-                            data[3] = "";
+                            data[3] = finalClassification;
                             data[4] = "";
-                            Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
-                            Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
-                            Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
 
                             PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                             if (putData.startPut()) {
@@ -167,27 +198,7 @@ public class EmailVerify extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
                                         //Check to see if teacher
-                                        if(email.equals("catherine.stringfellow@msutexas.edu"))
-                                        {
-                                            openMainTeacher();
-                                        }
-                                        else if(email.equals("nelson.passos@msutexas.edu"))
-                                        {
-                                            openMainTeacher();
-                                        }
-                                        else if(email.equals("terry.griffin@msutexas.edu"))
-                                        {
-                                            openMainTeacher();
-                                        }
-                                        else if(email.equals("tina.johnson@msutexas.edu"))
-                                        {
-                                            openMainTeacher();
-                                        }
-                                        else if(email.equals("eduardo.colmenares-diaz@msutexas.edu"))
-                                        {
-                                            openMainTeacher();
-                                        }
-                                        else if(email.equals("testTeacher@gmail.com"))
+                                        if(finalClassification.equals("teacher"))
                                         {
                                             openMainTeacher();
                                         }
