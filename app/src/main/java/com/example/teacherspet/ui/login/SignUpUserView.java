@@ -9,6 +9,7 @@ package com.example.teacherspet.ui.login;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -27,6 +28,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.FetchData;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+import java.util.Random;
+
 public class SignUpUserView extends AppCompatActivity {
 
     TextInputEditText TextInputEditTextName, TextInputEditTextEmail, TextInputEditTextPassword;
@@ -35,12 +38,43 @@ public class SignUpUserView extends AppCompatActivity {
      * This method is called when the corresponding button is pressed.
      * The application opens the email verification activity
      ******************************************************************/
-    public void openemailVerify(String email, String password, String name) {
+    public void openemailVerify(String email, String password, String name, int code) {
+
         Intent intent = new Intent(this, EmailVerify.class);
         intent.putExtra("email", email);
         intent.putExtra("password", password);
         intent.putExtra("name", name);
+        intent.putExtra("code", code);
         startActivity(intent);
+    }
+
+    public void sendEmail(String email, String password, String name)
+    {
+        Random rand = new Random();
+        int code = rand.nextInt(1000);
+
+        String[] TO = {"mmorgan@archercityisd.net"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+
+
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email Verification Code");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email verification code: " + code);
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            finish();
+            Log.i("Finished sending email.", "");
+            Toast.makeText(SignUpUserView.this,
+                    "Email sent.", Toast.LENGTH_SHORT).show();
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(SignUpUserView.this,
+                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
+
+        openemailVerify(email, password, name, code);
     }
 
 
@@ -79,7 +113,7 @@ public class SignUpUserView extends AppCompatActivity {
 
                 String finalPassword = password;
 
-                openemailVerify(email, finalPassword, name);
+                sendEmail(email, finalPassword, name);
             }
         });
     }

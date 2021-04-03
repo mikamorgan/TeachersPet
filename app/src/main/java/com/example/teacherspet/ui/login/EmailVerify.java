@@ -63,6 +63,12 @@ public class EmailVerify extends AppCompatActivity {
 
         Log.i("Send email", "");
 
+        /*final String username = "william.morgan0805@gmail.com";
+        final String password = "mpjspocgzhlzeerz";
+
+        String messageToSend = "Email verification code: " + code; */
+
+
         String[] TO = {"mmorgan@archercityisd.net"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
@@ -83,6 +89,12 @@ public class EmailVerify extends AppCompatActivity {
             Toast.makeText(EmailVerify.this,
                     "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
+
+        //Intent intent = new Intent(this, EmailVerify.class);
+        //intent.putExtra("email", email);
+        //intent.putExtra("password", password);
+        //intent.putExtra("name", name);
+        //startActivity(intent);
     }
 
 
@@ -96,12 +108,10 @@ public class EmailVerify extends AppCompatActivity {
         final EditText usernameEditText = findViewById(R.id.editTextTextPersonName2);
         final Button emailverifyButton = findViewById(R.id.emailverifybutton); // inside on create
 
-        Random rand = new Random();
-        int code = rand.nextInt(1000);
-
         String email = getIntent().getStringExtra("email");
         String finalPassword = getIntent().getStringExtra("password");
         String name = getIntent().getStringExtra("name");
+        String code = getIntent().getStringExtra("code");
 
         Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
         Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
