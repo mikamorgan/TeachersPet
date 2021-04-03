@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.Main_Menu_Student_View;
+import com.example.teacherspet.teacher_view.Main_Menu_Teacher_View;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import java.util.Random;
@@ -54,8 +55,13 @@ public class EmailVerify extends AppCompatActivity {
      * This method is called when the corresponding button is pressed.
      * The application opens the student main menu.
      ******************************************************************/
-    void openMain(){
+    void openMainStudent(){
         Intent intent = new Intent(this, Main_Menu_Student_View.class);
+        startActivity(intent);
+    }
+
+    void openMainTeacher(){
+        Intent intent = new Intent(this, Main_Menu_Teacher_View.class);
         startActivity(intent);
     }
 
@@ -159,7 +165,36 @@ public class EmailVerify extends AppCompatActivity {
                                     if(result.equals("Sign Up Success"))
                                     {
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                                        openMain();
+
+                                        //Check to see if teacher
+                                        if(email.equals("catherine.stringfellow@msutexas.edu"))
+                                        {
+                                            openMainTeacher();
+                                        }
+                                        else if(email.equals("nelson.passos@msutexas.edu"))
+                                        {
+                                            openMainTeacher();
+                                        }
+                                        else if(email.equals("terry.griffin@msutexas.edu"))
+                                        {
+                                            openMainTeacher();
+                                        }
+                                        else if(email.equals("tina.johnson@msutexas.edu"))
+                                        {
+                                            openMainTeacher();
+                                        }
+                                        else if(email.equals("eduardo.colmenares-diaz@msutexas.edu"))
+                                        {
+                                            openMainTeacher();
+                                        }
+                                        else if(email.equals("testTeacher@gmail.com"))
+                                        {
+                                            openMainTeacher();
+                                        }
+                                        else
+                                        {
+                                            openMainStudent();
+                                        }
                                         finish();
                                     }
                                     else
