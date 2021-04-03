@@ -12,16 +12,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.teacherspet.R;
+import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.FetchData;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class SignUpUserView extends AppCompatActivity {
+
+    TextInputEditText TextInputEditTextName, TextInputEditTextEmail, TextInputEditTextPassword;
 
     /******************************************************************
      * This method is called when the corresponding button is pressed.
@@ -38,15 +42,15 @@ public class SignUpUserView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_user_view);
 
-        final EditText emailEditText = findViewById(R.id.editTextTextEmailAddress);
-        final EditText nameEditText = findViewById(R.id.editTextTextPersonName);
-        final EditText passwordEditText = findViewById(R.id.editTextTextPassword);
-        final EditText passwordverifyEditText = findViewById(R.id.editTextTextPassword2);
+        EditText emailEditText = findViewById(R.id.editTextTextEmailAddress);
+        EditText nameEditText = findViewById(R.id.editTextTextPersonName);
+        EditText passwordEditText = findViewById(R.id.editTextTextPassword);
+        EditText passwordverifyEditText = findViewById(R.id.editTextTextPassword2);
 
         final Button loginButton = findViewById(R.id.login);
         final Button emailverifyButton = findViewById(R.id.signup); // inside on create
 
-        String name = nameEditText.getText().toString();
+        String name = String.valueOf(nameEditText.getText());
         String email = emailEditText.getText().toString();
         String temp1 = passwordEditText.getText().toString();
         String temp2 = passwordverifyEditText.getText().toString();
@@ -56,6 +60,10 @@ public class SignUpUserView extends AppCompatActivity {
         {
            password = temp1;
         }
+        //System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Pw: " + password);
+        Log.d("","Name " + name);
 
         User user = new User(email, password, name);
 
@@ -89,6 +97,10 @@ public class SignUpUserView extends AppCompatActivity {
                         data[2] = name;
                         data[3] = "";
                         data[4] = "";
+                        Toast.makeText(getApplicationContext(), email, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), finalPassword, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
+
                         PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
@@ -96,8 +108,8 @@ public class SignUpUserView extends AppCompatActivity {
                                 if(result.equals("Sign Up Success"))
                                 {
                                     Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                                    openemailVerify();
-                                    finish();
+                                    //openemailVerify();
+                                    //finish();
                                 }
                                 else
                                 {
