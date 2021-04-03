@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-
     <meta-data
         android:name="com.google.android.gms.vision.DEPENDENCIES"
         android:value="barcode" />
@@ -18,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeachersPet"
         android:usesCleartextTraffic="true">
+        <activity android:name=".teacher_view.Progress_Teacher_View"></activity>
+        <activity android:name=".teacher_view.Self_Study_Teacher_View" />
+        <activity android:name=".teacher_view.Lessons_Teacher_View" />
+        <activity android:name=".teacher_view.Attendance_Teacher_View" />
         <activity android:name=".ui.login.EmailVerify" />
         <activity android:name=".ui.login.SignUpUserView" />
         <activity android:name=".student_view.lessons.L_Stacks" />
@@ -39,7 +42,6 @@
         <activity android:name=".student_view.Self_Study_Student_View" />
         <activity android:name=".student_view.Lessons_Student_View" />
         <activity android:name=".student_view.Attendance_Student_View" />
-
         <activity android:name=".student_view.Main_Menu_Student_View" />
         <activity
             android:name=".ui.login.LoginActivity"
@@ -50,10 +52,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".student_view.Capture"
+        <activity
+            android:name=".student_view.Capture"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"/>
+            android:theme="@style/zxing_CaptureTheme" />
     </application>
 
 </manifest>
