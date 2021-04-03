@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.Main_Menu_Student_View;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import java.util.Random;
 
@@ -46,8 +49,6 @@ import java.util.Random;
  * student or teacher authorization to the user.
  ***************************************************************/
 public class EmailVerify extends AppCompatActivity {
-    Random rand = new Random();
-    int code = rand.nextInt(1000);
 
     /******************************************************************
      * This method is called when the corresponding button is pressed.
@@ -58,7 +59,7 @@ public class EmailVerify extends AppCompatActivity {
         startActivity(intent);
     }
 
-    protected void sendEmail() {
+    protected void sendEmail(int code) {
 
         Log.i("Send email", "");
 
@@ -93,9 +94,19 @@ public class EmailVerify extends AppCompatActivity {
         setContentView(R.layout.activity_email_verify);
 
         final EditText usernameEditText = findViewById(R.id.editTextTextPersonName2);
-        String enteredCode = usernameEditText.getText().toString();
         final Button emailverifyButton = findViewById(R.id.emailverifybutton); // inside on create
-        sendEmail();
+
+        Random rand = new Random();
+        int code = rand.nextInt(1000);
+
+        String email = getIntent().getStringExtra("email");
+        String finalPassword = getIntent().getStringExtra("password");
+        String name = getIntent().getStringExtra("name");
+
+        Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
+        //sendEmail(code);
 
         /****************************************************************************
          *  OnClickListener checks to see if a button is pressed
@@ -105,10 +116,52 @@ public class EmailVerify extends AppCompatActivity {
         emailverifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(enteredCode.equals("" + code))
-                {
-                    openMain();
-                }
+                String enteredCode = usernameEditText.getText().toString();
+                //if(enteredCode.equals("" + code))
+                //{
+                    Handler handler = new Handler(Looper.getMainLooper());
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            //Starting Write and Read data with URL
+                            //Creating array for parameters
+                            String[] field = new String[5];
+                            field[0] = "email";
+                            field[1] = "password";
+                            field[2] = "name";
+                            field[3] = "classification";
+                            field[4] = "picture";
+                            //Creating array for data
+                            String[] data = new String[5];
+                            data[0] = email;
+                            data[1] = finalPassword;
+                            data[2] = name;
+                            data[3] = "";
+                            data[4] = "";
+                            Toast.makeText(getApplicationContext(), "email" + email, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "pw" + finalPassword, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "name" + name, Toast.LENGTH_SHORT).show();
+
+                            PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
+                            if (putData.startPut()) {
+                                if (putData.onComplete()) {
+                                    String result = putData.getResult();
+                                    if(result.equals("Sign Up Success"))
+                                    {
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                        openMain();
+                                        finish();
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            }
+                            //End Write and Read data with URL
+                        }
+                    });
+                //}
             }
         });
     }
