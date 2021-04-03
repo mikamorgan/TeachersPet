@@ -76,15 +76,19 @@ public class SignUpUserView extends AppCompatActivity {
                     public void run() {
                         //Starting Write and Read data with URL
                         //Creating array for parameters
-                        String[] field = new String[3];
+                        String[] field = new String[5];
                         field[0] = "email";
                         field[1] = "password";
                         field[2] = "name";
+                        field[3] = "classification";
+                        field[4] = "picture";
                         //Creating array for data
-                        String[] data = new String[3];
+                        String[] data = new String[5];
                         data[0] = email;
                         data[1] = finalPassword;
                         data[2] = name;
+                        data[3] = "";
+                        data[4] = "";
                         PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
@@ -99,7 +103,6 @@ public class SignUpUserView extends AppCompatActivity {
                                 {
                                     Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                 }
-                                //End ProgressBar (Set visibility to GONE)
                             }
                         }
                         //End Write and Read data with URL
