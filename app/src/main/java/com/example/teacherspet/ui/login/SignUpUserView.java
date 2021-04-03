@@ -15,6 +15,7 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.teacherspet.R;
 import com.vishnusivadas.advanced_httpurlconnection.FetchData;
@@ -30,6 +31,7 @@ public class SignUpUserView extends AppCompatActivity {
         Intent intent = new Intent(this, EmailVerify.class);
         startActivity(intent);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,19 +85,26 @@ public class SignUpUserView extends AppCompatActivity {
                         data[0] = email;
                         data[1] = finalPassword;
                         data[2] = name;
-                        PutData putData = new PutData("192.168.1.138/LoginRegister/signup.php", "POST", field, data);
+                        PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();
+                                if(result.equals("Sign Up Success"))
+                                {
+                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                    openemailVerify();
+                                    finish();
+                                }
+                                else
+                                {
+                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                }
                                 //End ProgressBar (Set visibility to GONE)
-                                //Log.i("PutData", result);
                             }
                         }
                         //End Write and Read data with URL
                     }
                 });
-
-                openemailVerify();
             }
         });
     }
