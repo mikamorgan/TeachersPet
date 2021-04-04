@@ -211,7 +211,7 @@ public class SC_Algorithms extends AppCompatActivity {
                 String[] data = new String[1];
                 data[0] = email;
 
-                PutData putData = new PutData("http://192.168.1.138/LoginRegister/fetchdata.php", "POST", field, data);
+                PutData putData = new PutData("http://192.168.1.138/LoginRegister/fetchquiz.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();
@@ -225,7 +225,6 @@ public class SC_Algorithms extends AppCompatActivity {
 
     private void updateDB(String quizCount){
         String email = getIntent().getStringExtra("email");
-        Toast.makeText(getApplicationContext(), quizCount, Toast.LENGTH_SHORT).show();
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(new Runnable() {
             @Override
@@ -233,7 +232,7 @@ public class SC_Algorithms extends AppCompatActivity {
                 int quiz = Integer.parseInt(quizCount);
                 quiz++;
                 String updatedQuizCount = "" + quiz;
-                Toast.makeText(getApplicationContext(), updatedQuizCount, Toast.LENGTH_SHORT).show();
+
                 //Starting Write and Read data with URL
                 //Creating array for parameters
                 String[] field = new String[2];
@@ -248,14 +247,6 @@ public class SC_Algorithms extends AppCompatActivity {
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();
-                        if(result.equals("Updated"))
-                        {
-                            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        {
-                            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                        }
                     }
                 }
             }
