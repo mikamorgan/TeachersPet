@@ -122,6 +122,7 @@ public class QuestionBank {
             "Which is true about recursion compared to iteration?",         //64
             "What is a common application of recursion?",                   //65
             "Common programming tool used in recursive functions:",         //66
+            "Which data structure is used to perform recursion?",           //67
 
             //Linked Lists Questions
             "What is an advantage of linked lists over arrays?",            //67
@@ -135,8 +136,10 @@ public class QuestionBank {
             "How can a linked list be implemented?",                        //75
 
             //Stacks/Queues Questions
-            "Enter second question here",                                   //69
-            "Enter second question here",                                   //70
+            "Inserts into a stack:",                                       //69
+            "Removes from a stack:",                                       //70
+            "If you try to remove from empty stack:",                      //71
+            "If you try to push to full stack:",                           //72
     };
 
     /*************************************************
@@ -243,6 +246,7 @@ public class QuestionBank {
             {"Recursion is slower", "Recursion uses more memory", "Both true", "Neither true"}, //64
             {"Graph and tree traversal", "Multiplication", "Linked lists", "Embedded systems"}, //65
             {"While loops", "For loops", "If-else statements", "Switch cases"},                 //66
+            {"Queue", "Stack", "Linked List", "Tree"},                                          //67
 
             //Linked Lists Answers
             {"It is faster to access elements in arrays", "Linked lists can change size", "It is faster to access elements in linked lists", "Arrays can change size"},  //67
@@ -256,8 +260,10 @@ public class QuestionBank {
             {"Class", "Struct", "Both of these", "Neither of these"},                           //75
 
             //Stacks/Queues Answers
-            {"Choice A", "Choice B", "Choice C", "Choice D"},                                   //69
-            {"Choice A", "Choice B", "Choice C", "Choice D"}                                    //70
+            {"Create", "Push", "Evaluation", "Pop"},                                   //69
+            {"Create", "Push", "Evaluation", "Pop"},
+            {"Underflow", "Empty Creation", "Overflow", "Garbage Collection"},         //70
+            {"Overflow", "Crash", "Underflow", "User flow"}
     };
 
     /**************************************************
@@ -365,6 +371,7 @@ public class QuestionBank {
             "Both true",                                //64
             "Graph and tree traversal",                 //65
             "If-else statements",                       //66
+            "stack",                                    //67
 
             //Linked Lists Correct Answers
             "Linked lists can change size",             //67
@@ -378,8 +385,10 @@ public class QuestionBank {
             "Both of these",                            //75
 
             //Stacks/Queues Correct Answers
-            "Choice D",                                 //69
-            "Choice A"                                  //70
+            "Push",                                 //69
+            "Pop",                                  //70
+            "Underflow",                            //71
+            "Overflow"
     };
 
     /**************************************************
