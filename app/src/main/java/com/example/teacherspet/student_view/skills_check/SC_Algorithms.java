@@ -193,7 +193,41 @@ public class SC_Algorithms extends AppCompatActivity {
         //but score variable is an int
         mscoreView.setText("" + point);
 
+        fetchDB();
+
         updateDB();
+    }
+
+    private void fetchDB(){
+        String email = getIntent().getStringExtra("email");
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                //Starting Write and Read data with URL
+                //Creating array for parameters
+                String[] field = new String[1];
+                field[0] = "email";
+                //Creating array for data
+                String[] data = new String[1];
+                data[0] = email;
+
+                PutData putData = new PutData("http://192.168.1.138/LoginRegister/fetchdata.php", "POST", field, data);
+                if (putData.startPut()) {
+                    if (putData.onComplete()) {
+                        String result = putData.getResult();
+                        if(result.equals("Updated"))
+                        {
+                            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
     }
 
     private void updateDB(){
@@ -212,7 +246,7 @@ public class SC_Algorithms extends AppCompatActivity {
                 data[0] = email;
                 data[1] = "6";
 
-                PutData putData = new PutData("http://192.168.1.138/LoginRegister/update.php", "POST", field, data);
+                PutData putData = new PutData("http://192.168.1.138/LoginRegister/updatequiz.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();
