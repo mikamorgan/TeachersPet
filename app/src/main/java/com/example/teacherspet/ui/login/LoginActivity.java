@@ -7,34 +7,19 @@ package com.example.teacherspet.ui.login;
  *
 
  ************************************************************************/
-import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Handler;
 import android.os.Looper;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.teacherspet.student_view.Attendance_Student_View;
-import com.example.teacherspet.student_view.Main_Menu_Student_View;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.teacherspet.R;
+import com.example.teacherspet.student_view.Main_Menu_Student_View;
 import com.example.teacherspet.teacher_view.Main_Menu_Teacher_View;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -130,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                         data[0] = email;
                         data[1] = finalPassword;
 
-                        PutData putData = new PutData("http://192.168.1.138/LoginRegister/login.php", "POST", field, data);
+                        PutData putData = new PutData("http://172.27.176.1/LoginRegister/login.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

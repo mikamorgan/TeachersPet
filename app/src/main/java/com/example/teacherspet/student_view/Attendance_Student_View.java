@@ -85,7 +85,7 @@ public class Attendance_Student_View extends AppCompatActivity {
                     dialogInterface.dismiss();
                 }
             });
-            //show alert dilog
+            //show alert dialog
             builder.show();
         } else {
             // when result content is null
