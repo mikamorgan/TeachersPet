@@ -24,23 +24,8 @@ import com.example.teacherspet.data.model.LoggedInUser;
 
 public class User {
 
-    /*private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
-    private MutableLiveData<LoginResult> loginResult = new MutableLiveData<>();
-    private LoginRepository loginRepository;
 
-    User(LoginRepository loginRepository) {
-        this.loginRepository = loginRepository;
-    }
-
-    LiveData<LoginFormState> getLoginFormState() {
-        return loginFormState;
-    }
-
-    LiveData<LoginResult> getLoginResult() {
-        return loginResult;
-    }*/
-
-    String email, password, name;
+    String email, password, name, classification, picture, attendance, quizzes;
 
     //Default user constructor
     public User(String email, String password, String name){
@@ -48,20 +33,12 @@ public class User {
         this.password = password;
         this.email = email;
         this.name = name;
+        this.classification = classification;
+        this.picture = picture;
+        this.attendance = attendance;
+        this.quizzes = quizzes;
+
         //String profile_picture_address;
     }
-
-    //Funtion to check login result against credentials stored in login repository
-    /*public void login(String username, String password) {
-        // can be launched in a separate asynchronous job
-        Result<LoggedInUser> result = loginRepository.login(username, password);
-
-        if (result instanceof Result.Success) {
-            LoggedInUser data = ((Result.Success<LoggedInUser>) result).getData();
-            loginResult.setValue(new LoginResult(new LoggedInUserView(data.getDisplayName())));
-        } else {
-            loginResult.setValue(new LoginResult(R.string.login_failed));
-        }
-    }*/
 
 }

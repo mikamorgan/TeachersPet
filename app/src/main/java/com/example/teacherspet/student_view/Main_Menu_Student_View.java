@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.teacherspet.R;
 
@@ -32,6 +33,8 @@ public class Main_Menu_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openAttendance() {
         Intent intent = new Intent(this, Attendance_Student_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
@@ -50,6 +53,8 @@ public class Main_Menu_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openSelf_Study() {
         Intent intent = new Intent(this, Self_Study_Student_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
@@ -59,6 +64,8 @@ public class Main_Menu_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openProgress() {
         Intent intent = new Intent(this, Progress_Student_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 

@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.skills_check.SC_Algorithms;
@@ -39,6 +40,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openAlgorithms() {
         Intent intent = new Intent(this, SC_Algorithms.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     /******************************************************************
@@ -48,6 +51,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openBinary() {
         Intent intent = new Intent(this, SC_Binary_Trees.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     /******************************************************************
@@ -57,6 +62,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openLists() {
         Intent intent = new Intent(this, SC_Lists.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     /******************************************************************
@@ -66,6 +73,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openPointers() {
         Intent intent = new Intent(this, SC_Pointers.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     /******************************************************************
@@ -75,6 +84,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openRecursion() {
         Intent intent = new Intent(this, SC_Recursion.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     /******************************************************************
@@ -84,6 +95,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openReview() {
         Intent intent = new Intent(this, SC_Review.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     /******************************************************************
@@ -93,6 +106,8 @@ public class Self_Study_Student_View extends AppCompatActivity {
      ******************************************************************/
     public void openStacks() {
         Intent intent = new Intent(this, SC_Stacks.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 

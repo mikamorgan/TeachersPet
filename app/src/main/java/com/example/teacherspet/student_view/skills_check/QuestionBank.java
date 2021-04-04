@@ -115,31 +115,31 @@ public class QuestionBank {
             "\"int * const num;\" is a:",                                   //72
 
             //Recursion Questions
-            "A recursive function:",                                        //60
-            "What terminates recursion?",                                   //61
-            "Tail recursion:",                                              //62
-            "How do you avoid infinite recursion?",                         //63
-            "Which is true about recursion compared to iteration?",         //64
-            "What is a common application of recursion?",                   //65
-            "Common programming tool used in recursive functions:",         //66
-            "Which data structure is used to perform recursion?",           //67
+            "A recursive function:",                                        //73
+            "What terminates recursion?",                                   //74
+            "Tail recursion:",                                              //75
+            "How do you avoid infinite recursion?",                         //76
+            "Which is true about recursion compared to iteration?",         //77
+            "What is a common application of recursion?",                   //78
+            "Common programming tool used in recursive functions:",         //79
+            "Which data structure is used to perform recursion?",           //80
 
             //Linked Lists Questions
-            "What is an advantage of linked lists over arrays?",            //67
-            "What is an advantage of arrays over linked lists?",            //68
-            "Which sort algorithm is impossible to sort a random linked list?",//69
-            "Which of these is not a type of linked list?",                 //70
-            "How are the elements in a list linked?",                       //71
-            "Can you create a doubly linked list using only one pointer with every node?",//72
-            "What data structure does a circular linked list implement?",   //73
-            "Which is not a disadvantage of linked lists?",                 //74
-            "How can a linked list be implemented?",                        //75
+            "What is an advantage of linked lists over arrays?",            //81
+            "What is an advantage of arrays over linked lists?",            //82
+            "Which sort algorithm is impossible to sort a random linked list?",//83
+            "Which of these is not a type of linked list?",                 //84
+            "How are the elements in a list linked?",                       //85
+            "Can you create a doubly linked list using only one pointer with every node?",//86
+            "What data structure does a circular linked list implement?",   //87
+            "Which is not a disadvantage of linked lists?",                 //88
+            "How can a linked list be implemented?",                        //89
 
             //Stacks/Queues Questions
-            "Inserts into a stack:",                                       //69
-            "Removes from a stack:",                                       //70
-            "If you try to remove from empty stack:",                      //71
-            "If you try to push to full stack:",                           //72
+            "Inserts into a stack:",                                       //90
+            "Removes from a stack:",                                       //91
+            "If you try to remove from empty stack:",                      //92
+            "If you try to push to full stack:",                           //93
     };
 
     /*************************************************

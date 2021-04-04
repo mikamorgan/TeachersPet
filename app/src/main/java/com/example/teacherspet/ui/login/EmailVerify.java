@@ -153,19 +153,23 @@ public class EmailVerify extends AppCompatActivity {
                         public void run() {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
-                            String[] field = new String[5];
+                            String[] field = new String[7];
                             field[0] = "email";
                             field[1] = "password";
                             field[2] = "name";
                             field[3] = "classification";
                             field[4] = "picture";
+                            field[5] = "attendance";
+                            field[6] = "quizzes";
                             //Creating array for data
-                            String[] data = new String[5];
+                            String[] data = new String[7];
                             data[0] = email;
                             data[1] = finalPassword;
                             data[2] = name;
                             data[3] = finalClassification;
                             data[4] = "";
+                            data[5] = "0";
+                            data[6] = "0";
 
                             PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                             if (putData.startPut()) {

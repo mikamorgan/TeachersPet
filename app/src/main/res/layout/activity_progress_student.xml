@@ -10,8 +10,8 @@
     <ProgressBar
         android:id="@+id/attendance_bar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:max="100"
-        android:progress="50"
+        android:max="36"
+        android:progress="30"
         android:background="#DDD"
         android:layout_width="300dp"
         android:layout_height="15dp"
@@ -25,7 +25,7 @@
     <ProgressBar
         android:id="@+id/quiz_bar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:max="100"
+        android:max="105"
         android:progress="50"
         android:background="#DDD"
         android:layout_width="300dp"

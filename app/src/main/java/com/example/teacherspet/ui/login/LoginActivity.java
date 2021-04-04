@@ -34,13 +34,15 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    void openMainStudent(){
+    void openMainStudent(String email){
         Intent intent = new Intent(this, Main_Menu_Student_View.class);
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
-    void openMainTeacher(){
+    void openMainTeacher(String email){
         Intent intent = new Intent(this, Main_Menu_Teacher_View.class);
+        intent.putExtra("email", email);
         startActivity(intent);
     }
     @Override
@@ -126,11 +128,11 @@ public class LoginActivity extends AppCompatActivity {
                                     //Check to see if teacher
                                     if(finalClassification.equals("teacher"))
                                     {
-                                        openMainTeacher();
+                                        openMainTeacher(email);
                                     }
                                     else
                                     {
-                                        openMainStudent();
+                                        openMainStudent(email);
                                     }
                                     finish();
                                 }

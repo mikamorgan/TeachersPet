@@ -3,12 +3,15 @@ package com.example.teacherspet.student_view.skills_check;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.teacherspet.R;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class SC_Algorithms extends AppCompatActivity {
 
@@ -189,6 +192,42 @@ public class SC_Algorithms extends AppCompatActivity {
         //Must use concatenation because "setText" expects a string,
         //but score variable is an int
         mscoreView.setText("" + point);
+
+        updateDB();
+    }
+
+    private void updateDB(){
+        String email = getIntent().getStringExtra("email");
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                //Starting Write and Read data with URL
+                //Creating array for parameters
+                String[] field = new String[2];
+                field[0] = "email";
+                field[1] = "quizzes";
+                //Creating array for data
+                String[] data = new String[2];
+                data[0] = email;
+                data[1] = "6";
+
+                PutData putData = new PutData("http://192.168.1.138/LoginRegister/update.php", "POST", field, data);
+                if (putData.startPut()) {
+                    if (putData.onComplete()) {
+                        String result = putData.getResult();
+                        if(result.equals("Updated"))
+                        {
+                            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
     }
 
     /******************************************************************
