@@ -24,7 +24,6 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class Attendance_Student_View extends AppCompatActivity {
     /************************************************************************
-     * TODO: Create scrollable Layout
      * TODO: Connect app to camera of users phone
      * TODO: Add buttons and link to QR code scan.
      * TODO: return data to API backend
