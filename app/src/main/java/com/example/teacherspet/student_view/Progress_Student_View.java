@@ -18,11 +18,6 @@ public class Progress_Student_View extends AppCompatActivity {
      * TODO: Link XML file with Figma layout
      * TODO: Pass in attendance data for student from database
      * TODO: Display attendance progress in graphical way
-     *
-     * OPTIONAL EXTRAS:
-     * TODO: Add calendar style view of attendance
-     * TODO: Add conditional formatting (red for absent, green for present,
-     * yellow for tardy, etc.)
      ************************************************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {

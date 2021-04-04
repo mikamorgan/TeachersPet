@@ -115,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                         data[0] = email;
                         data[1] = finalPassword;
 
-                        PutData putData = new PutData("http://172.27.176.1/LoginRegister/login.php", "POST", field, data);
+                        PutData putData = new PutData("http://192.168.1.138/LoginRegister/login.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

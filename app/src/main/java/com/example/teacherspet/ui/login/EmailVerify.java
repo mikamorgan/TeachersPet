@@ -167,7 +167,7 @@ public class EmailVerify extends AppCompatActivity {
                             data[3] = finalClassification;
                             data[4] = "";
 
-                            PutData putData = new PutData("http://172.27.176.1/LoginRegister/signup.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();

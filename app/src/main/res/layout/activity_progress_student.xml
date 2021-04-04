@@ -4,7 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".student_view.Progress_Student_View">
-    android:background="@drawable/progress_studentview">
+    tools:context=".student_view.Progress_Student_View"
+    android:background="@drawable/progress_student_view_bg">
+
+    <ProgressBar
+        android:id="@+id/attendance_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progress="50"
+        android:background="#DDD"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374" />
+
+    <ProgressBar
+        android:id="@+id/quiz_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progress="50"
+        android:background="#DDD"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendance_bar"
+        app:layout_constraintVertical_bias="0.24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
