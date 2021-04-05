@@ -46,11 +46,15 @@ public class EmailVerify extends AppCompatActivity {
      ******************************************************************/
     void openMainStudent(){
         Intent intent = new Intent(this, Main_Menu_Student_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
     void openMainTeacher(){
         Intent intent = new Intent(this, Main_Menu_Teacher_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
