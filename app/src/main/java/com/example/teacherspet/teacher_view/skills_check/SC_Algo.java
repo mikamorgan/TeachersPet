@@ -83,7 +83,7 @@ public class SC_Algo extends AppCompatActivity {
 
     public void openEditQuestions(int questionIndex) {
         Intent intent = new Intent(this, Edit_Questions.class);
-        intent.putExtra("index", questionIndex);
+        intent.putExtra("index", ""+questionIndex);
         startActivity(intent);
     }
 

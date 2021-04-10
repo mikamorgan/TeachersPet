@@ -82,7 +82,7 @@ public class SC_Poi extends AppCompatActivity {
 
     public void openEditQuestions(int questionIndex) {
         Intent intent = new Intent(this, Edit_Questions.class);
-        intent.putExtra("index", questionIndex);
+        intent.putExtra("index", ""+questionIndex);
         startActivity(intent);
     }
 

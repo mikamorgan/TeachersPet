@@ -432,4 +432,29 @@ public class QuestionBank {
         String answer = CorrectAnswers[a];
         return answer;
     }
+
+    //Method to set question in array at given index
+    public void setQuestion(int a, String question){
+        Questions[a] = question;
+    }
+
+    //Method to set answer choices in array at given index
+    public void setChoice1(int a, String choice){
+        Answers[a][0] = choice;
+    }
+
+    //Method to set answer choices in array at given index
+    public void setChoice2(int a, String choice){
+        Answers[a][1] = choice;
+    }
+
+    //Method to set answer choices in array at given index
+    public void setChoice3(int a, String choice){
+        Answers[a][2] = choice;
+    }
+
+    //Method to set answer choices in array at given index
+    public void setChoice4(int a, String choice){
+        Answers[a][3] = choice;
+    }
 }
