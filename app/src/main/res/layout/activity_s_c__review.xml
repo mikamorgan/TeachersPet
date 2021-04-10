@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/skillscheck_blank_studentview"
+    android:background="@drawable/sc_student_bg"
 
     tools:context=".student_view.skills_check.SC_Binary_Trees">
 
