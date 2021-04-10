@@ -2,6 +2,7 @@ package com.example.teacherspet.teacher_view.skills_check;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.skills_check.QuestionBank;
+import com.example.teacherspet.teacher_view.Attendance_Teacher_View;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class SC_Algo extends AppCompatActivity {
@@ -70,11 +72,20 @@ public class SC_Algo extends AppCompatActivity {
     private Button mchoice3;
     private Button mchoice4;
 
+    //Button to edit question/answer choices
+    private Button edit;
+
     //Save the correct answer to match with selected button string
     private String answer;
 
     //Current algorithm material are in QuestionBank indices 38-57
     private int questionIndex = 38;
+
+    public void openEditQuestions(int questionIndex) {
+        Intent intent = new Intent(this, Edit_Questions.class);
+        intent.putExtra("index", questionIndex);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +99,7 @@ public class SC_Algo extends AppCompatActivity {
         mchoice2 = (Button) findViewById(R.id.choice2);
         mchoice3 = (Button) findViewById(R.id.choice3);
         mchoice4 = (Button) findViewById(R.id.choice4);
+        edit = (Button) findViewById(R.id.edit);
 
         //Method to update the question and button text to populate algorithm info
         updateQuestions();
@@ -101,6 +113,13 @@ public class SC_Algo extends AppCompatActivity {
          *  repopulate screen with new question and answer choices
          *  (still in algorithm section- determined by index passed in).
          ***************************************************************************/
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEditQuestions(questionIndex);
+            }
+        });
 
         mchoice1.setOnClickListener(new View.OnClickListener() {
             @Override
