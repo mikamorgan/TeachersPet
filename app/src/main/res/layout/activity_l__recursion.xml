@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".student_view.lessons.L_Binary_Trees">
+    tools:context=".student_view.lessons.L_Recursion">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

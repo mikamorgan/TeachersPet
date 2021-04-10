@@ -10,14 +10,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.Attendance_Student_View;
 import com.example.teacherspet.student_view.Lessons_Student_View;
 import com.example.teacherspet.student_view.Progress_Student_View;
 import com.example.teacherspet.student_view.Self_Study_Student_View;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class Main_Menu_Teacher_View extends AppCompatActivity {
 
@@ -57,10 +61,14 @@ public class Main_Menu_Teacher_View extends AppCompatActivity {
         setContentView(R.layout.activity_main__menu__teacher__view);
 
         //Create the 4 buttons to navigate to the other activity pages
-        final Button attendanceButton = findViewById(R.id.teacher_attendance);
-        final Button lessonsButton = findViewById(R.id.teacher_lessons);
-        final Button self_studyButton = findViewById(R.id.teacher_self_study);
-        final Button progressButton = findViewById(R.id.teacher_progress);
+        final Button attendanceButton = findViewById(R.id.attendance);
+        final Button lessonsButton = findViewById(R.id.lessons);
+        final Button self_studyButton = findViewById(R.id.self_study);
+        final Button progressButton = findViewById(R.id.progress);
+
+        //Create text view box to hold teacher name
+        TextView name = (TextView) findViewById(R.id.name);
+        fetchDB();
 
         /****************************************************************************
          *  OnClickListener checks to see if a button is pressed
@@ -109,5 +117,34 @@ public class Main_Menu_Teacher_View extends AppCompatActivity {
                 openProgress();
             }
         });
+    }
+
+    private void fetchDB(){
+        String email = getIntent().getStringExtra("email");
+        String result = "";
+        //Create text view box to hold student name
+        TextView name = (TextView) findViewById(R.id.name);
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                //Starting Write and Read data with URL
+                //Creating array for parameters
+                String[] field = new String[1];
+                field[0] = "email";
+                //Creating array for data
+                String[] data = new String[1];
+                data[0] = email;
+
+                PutData putData = new PutData("http://192.168.1.138/LoginRegister/fetchname.php", "POST", field, data);
+                if (putData.startPut()) {
+                    if (putData.onComplete()) {
+                        String result = putData.getResult();
+                        name.setText(result);
+                    }
+                }
+            }
+        });
+
     }
 }

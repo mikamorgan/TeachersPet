@@ -10,11 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.teacherspet.R;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 /************************************************************************
  * OPTIONAL EXTRAS:
@@ -82,6 +86,11 @@ public class Main_Menu_Student_View extends AppCompatActivity {
         final Button self_studyButton = findViewById(R.id.self_study);
         final Button progressButton = findViewById(R.id.progress);
 
+        //Create text view box to hold student name
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("Student Name");
+        fetchDB();
+
         /****************************************************************************
          *  OnClickListener checks to see if a button is pressed
          *
@@ -130,4 +139,33 @@ public class Main_Menu_Student_View extends AppCompatActivity {
             }
         });
     }
+
+        private void fetchDB(){
+            String email = getIntent().getStringExtra("email");
+            String result = "";
+            //Create text view box to hold student name
+            TextView name = (TextView) findViewById(R.id.name);
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    //Starting Write and Read data with URL
+                    //Creating array for parameters
+                    String[] field = new String[1];
+                    field[0] = "email";
+                    //Creating array for data
+                    String[] data = new String[1];
+                    data[0] = email;
+
+                    PutData putData = new PutData("http://192.168.1.138/LoginRegister/fetchname.php", "POST", field, data);
+                    if (putData.startPut()) {
+                        if (putData.onComplete()) {
+                            String result = putData.getResult();
+                            name.setText(result);
+                        }
+                    }
+                }
+            });
+
+        }
 }
