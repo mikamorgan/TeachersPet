@@ -76,8 +76,8 @@ public class SC_Lists extends AppCompatActivity {
     //Initialize score to zero (should we change this if we "save" old progress?)
     private int mscore = 0;
 
-    //Current lists material are in QuestionBank indices 67-68
-    private int questionIndex = 67;
+    //Current lists material are in QuestionBank indices 81-89
+    private int questionIndex = 81;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -271,8 +271,8 @@ public class SC_Lists extends AppCompatActivity {
         questionIndex++;
 
         //If you reach the end of list questions, start over
-        if(questionIndex > 68) {
-            questionIndex = 67;
+        if(questionIndex > 89) {
+            questionIndex = 81;
         }
     }
 }

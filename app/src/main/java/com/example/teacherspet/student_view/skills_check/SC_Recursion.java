@@ -77,7 +77,7 @@ public class SC_Recursion extends AppCompatActivity {
     private int mscore = 0;
 
     //Current recursion material are in QuestionBank indices 60-66
-    private int questionIndex = 60;
+    private int questionIndex = 73;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -271,8 +271,8 @@ public class SC_Recursion extends AppCompatActivity {
         questionIndex++;
 
         //If you reach the end of recursion questions, start over
-        if(questionIndex > 66) {
-            questionIndex = 60;
+        if(questionIndex > 80) {
+            questionIndex = 73;
         }
     }
 }

@@ -4,6 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sc_teacher_bg"
+
     tools:context=".teacher_view.skills_check.SC_BT">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="385dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="24dp"
+        android:text="Question"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choice1"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="24dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/Clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choice2"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        app:backgroundTint="@color/Clear"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice1" />
+
+    <Button
+        android:id="@+id/choice3"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        app:backgroundTint="@color/Clear"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice2" />
+
+    <Button
+        android:id="@+id/choice4"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:text=""
+        app:backgroundTint="@color/Clear"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice3"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

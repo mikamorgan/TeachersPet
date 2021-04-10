@@ -77,7 +77,7 @@ public class SC_Stacks extends AppCompatActivity {
     private int mscore = 0;
 
     //Current stacks material are in QuestionBank indices 69-70
-    private int questionIndex = 69;
+    private int questionIndex = 90;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -271,8 +271,8 @@ public class SC_Stacks extends AppCompatActivity {
         questionIndex++;
 
         //If you reach the end of stacks questions, start over
-        if(questionIndex > 70) {
-            questionIndex = 69;
+        if(questionIndex > 93) {
+            questionIndex = 90;
         }
     }
 }

@@ -62,7 +62,6 @@ public class SC_Algo extends AppCompatActivity {
     private QuestionBank questionBank = new QuestionBank();
 
     //Create text fields to display question and score
-    private TextView mscoreView;
     private TextView mquestionView;
 
     //Create 4 buttons to hold each answer choice

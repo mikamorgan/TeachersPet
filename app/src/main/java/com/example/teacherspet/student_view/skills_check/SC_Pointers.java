@@ -77,7 +77,7 @@ public class SC_Pointers extends AppCompatActivity {
     private int mscore = 0;
 
     //Current pointers material are in QuestionBank indices 60-66
-    private int questionIndex = 60;
+    private int questionIndex = 58;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -270,7 +270,7 @@ public class SC_Pointers extends AppCompatActivity {
         questionIndex++;
 
         //If you reach the end of pointers questions, start over
-        if(questionIndex > 59) {
+        if(questionIndex > 72) {
             questionIndex = 58;
         }
     }
