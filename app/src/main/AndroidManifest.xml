@@ -17,7 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeachersPet"
         android:usesCleartextTraffic="true">
-        <activity android:name=".teacher_view.skills_check.Edit_Questions_Updated"></activity>
+        <activity android:name=".teacher_view.lessons.L_Sta"></activity>
+        <activity android:name=".teacher_view.lessons.L_Rev" />
+        <activity android:name=".teacher_view.lessons.L_Rec" />
+        <activity android:name=".teacher_view.lessons.L_Poi" />
+        <activity android:name=".teacher_view.lessons.L_Lis" />
+        <activity android:name=".teacher_view.lessons.L_B_T" />
+        <activity android:name=".teacher_view.lessons.L_Algo" />
+        <activity android:name=".teacher_view.skills_check.Edit_Questions_Updated" />
         <activity android:name=".teacher_view.skills_check.Edit_Questions" />
         <activity android:name=".teacher_view.skills_check.SC_Sta" />
         <activity android:name=".teacher_view.skills_check.SC_Rev" />
