@@ -26,7 +26,7 @@ public class QuestionBank {
      * correct answer should match
      ****************************************************************/
 
-    private String Questions [] = {
+    public String Questions [] = {
 
             /**************************************************************
             * Since questions are stored in a string array, put each
@@ -149,7 +149,7 @@ public class QuestionBank {
      * the index of the corresponding question!
      ************************************************/
 
-    private String Answers [][] = {
+    public String Answers [][] = {
 
             /**********************************************************************
              * Since answer choices are stored in a two-dimensional string array,
@@ -275,7 +275,7 @@ public class QuestionBank {
      * match the corresponding question and choices!
      *************************************************/
 
-    private String CorrectAnswers [] = {
+    public String CorrectAnswers [] = {
 
             /**************************************************************
              * Since correct answers are stored in a string array, put each
@@ -435,26 +435,26 @@ public class QuestionBank {
 
     //Method to set question in array at given index
     public void setQuestion(int a, String question){
-        Questions[a] = question;
+        this.Questions[a] = question;
     }
 
     //Method to set answer choices in array at given index
     public void setChoice1(int a, String choice){
-        Answers[a][0] = choice;
+        this.Answers[a][0] = choice;
     }
 
     //Method to set answer choices in array at given index
     public void setChoice2(int a, String choice){
-        Answers[a][1] = choice;
+        this.Answers[a][1] = choice;
     }
 
     //Method to set answer choices in array at given index
     public void setChoice3(int a, String choice){
-        Answers[a][2] = choice;
+        this.Answers[a][2] = choice;
     }
 
     //Method to set answer choices in array at given index
     public void setChoice4(int a, String choice){
-        Answers[a][3] = choice;
+        this.Answers[a][3] = choice;
     }
 }

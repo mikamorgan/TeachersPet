@@ -83,6 +83,8 @@ public class SC_Rec extends AppCompatActivity {
     public void openEditQuestions(int questionIndex) {
         Intent intent = new Intent(this, Edit_Questions.class);
         intent.putExtra("index", ""+questionIndex);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 

@@ -82,6 +82,8 @@ public class SC_Rev extends AppCompatActivity {
 
     public void openEditQuestions(int questionIndex) {
         Intent intent = new Intent(this, Edit_Questions.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         intent.putExtra("index", ""+questionIndex);
         startActivity(intent);
     }

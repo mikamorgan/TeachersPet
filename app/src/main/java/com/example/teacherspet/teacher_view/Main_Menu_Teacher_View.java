@@ -37,21 +37,29 @@ public class Main_Menu_Teacher_View extends AppCompatActivity {
      ************************************************************************/
     public void openAttendance() {
         Intent intent = new Intent(this, Attendance_Teacher_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
     public void openLessons() {
         Intent intent = new Intent(this, Lessons_Teacher_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
     public void openSelf_Study() {
         Intent intent = new Intent(this, Self_Study_Teacher_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
     public void openProgress() {
         Intent intent = new Intent(this, Progress_Teacher_View.class);
+        String email = getIntent().getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 
