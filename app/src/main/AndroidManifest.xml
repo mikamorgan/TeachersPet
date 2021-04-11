@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeachersPet"
         android:usesCleartextTraffic="true">
-        <activity android:name=".teacher_view.lessons.Edit_Lessons"></activity>
+        <activity android:name=".teacher_view.lessons.Edit_Lessons_Updated"></activity>
+        <activity android:name=".teacher_view.lessons.Edit_Lessons" />
         <activity android:name=".teacher_view.lessons.L_Sta" />
         <activity android:name=".teacher_view.lessons.L_Rev" />
         <activity android:name=".teacher_view.lessons.L_Rec" />

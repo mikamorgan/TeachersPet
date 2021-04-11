@@ -43,7 +43,7 @@ public class L_Poi extends AppCompatActivity {
         Intent intent = new Intent(this, Edit_Lessons.class);
         String email = getIntent().getStringExtra("email");
         intent.putExtra("email", email);
-        intent.putExtra("position", position);
+        intent.putExtra("position", ""+ position);
         intent.putExtra("lesson", "poi");
         startActivity(intent);
     }
