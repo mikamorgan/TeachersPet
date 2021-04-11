@@ -21,11 +21,12 @@ public class Edit_Lessons extends AppCompatActivity {
         String position = getIntent().getStringExtra("position");
         String lesson = getIntent().getStringExtra("lesson");
         intent.putExtra("email", email);
-        intent.putExtra("position", "" + position);
+        intent.putExtra("position", position);
         intent.putExtra("lesson", lesson);
         intent.putExtra("title", title);
         intent.putExtra("description", description);
         intent.putExtra("link", link);
+
 
         startActivity(intent);
     }
