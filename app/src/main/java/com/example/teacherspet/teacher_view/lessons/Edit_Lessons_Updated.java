@@ -1,9 +1,13 @@
 package com.example.teacherspet.teacher_view.lessons;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
@@ -11,26 +15,38 @@ import android.widget.Toast;
 import com.example.teacherspet.R;
 
 public class Edit_Lessons_Updated extends AppCompatActivity {
-    ScrollView scrollView;
-    String lesson = getIntent().getStringExtra("lesson");
-    String email = getIntent().getStringExtra("email");
-    String position = getIntent().getStringExtra("position");
-    String title = getIntent().getStringExtra("title");
-    String description = getIntent().getStringExtra("description");
-    String link = getIntent().getStringExtra("link");
+    //ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit__lessons__updated);
-        scrollView = findViewById(R.id.rl);
+        //setContentView(R.layout.activity_edit__lessons__updated);
+        //scrollView = findViewById(R.id.rl);
 
-        Toast.makeText(getApplicationContext(), "pos" + position, Toast.LENGTH_SHORT).show();
+        ScrollView scrollView = new ScrollView(this);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        ConstraintLayout.LayoutParams layoutParams1 = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        scrollView.setLayoutParams(layoutParams1);
 
-        //ImageView Setup
+        ConstraintLayout linearLayout = new ConstraintLayout(this);
+
+        scrollView.addView(linearLayout);
+
         ImageView imageView = new ImageView(this);
-        //setting image resource
+        ConstraintLayout.LayoutParams params1 = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params1.setMargins(100, 220, 100, 100);
+        imageView.setLayoutParams(params1);
         imageView.setImageResource(R.drawable.msu);
+
+        setContentView(scrollView);
+
+
+        String lesson = getIntent().getStringExtra("lesson");
+        String email = getIntent().getStringExtra("email");
+        String position = getIntent().getStringExtra("position");
+        String title = getIntent().getStringExtra("title");
+        String description = getIntent().getStringExtra("description");
+        String link = getIntent().getStringExtra("link");
 
         //Set background to match layout of lesson passed in
         switch(lesson){
@@ -58,10 +74,8 @@ public class Edit_Lessons_Updated extends AppCompatActivity {
         }
         switch (position){
             case "1":
-                imageView.layout(100, 220, 100, 100);
                 Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_SHORT).show();
-                scrollView.addView(imageView);
-                setContentView(scrollView);
+                linearLayout.addView(imageView);
                 break;
             case "2":
                 break;
