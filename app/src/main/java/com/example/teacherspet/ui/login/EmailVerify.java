@@ -4,7 +4,6 @@ package com.example.teacherspet.ui.login;
  *          imports the classes for the Student View Main Menu pages and
  *          the bundle packages for the buttons UI interaction of the app.
  *
-
  ************************************************************************/
 import android.content.Intent;
 import android.net.Uri;
@@ -58,20 +57,19 @@ public class EmailVerify extends AppCompatActivity {
         startActivity(intent);
     }
 
-    protected void sendEmail(int code) {
+    protected void sendEmail(String code) {
 
         Log.i("Send email", "");
 
         /*final String username = "william.morgan0805@gmail.com";
         final String password = "mpjspocgzhlzeerz";
-
         String messageToSend = "Email verification code: " + code; */
 
-
-        String[] TO = {"mmorgan@archercityisd.net"};
+       String[] TO = {"ladelle2016@gmail.com"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
+        emailIntent.setData(Uri.parse("mailto:")); // "mailto:ladelle2016@gmail.com"
+       // emailIntent.addFlags(emailIntent.FLAG_ACTIVITY_NEW_TASK);
+        //emailIntent.setType("text/plain");
 
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
@@ -83,7 +81,7 @@ public class EmailVerify extends AppCompatActivity {
             finish();
             Log.i("Finished sending email.", "");
             Toast.makeText(EmailVerify.this,
-                    "Email sent.", Toast.LENGTH_SHORT).show();
+                    "Email sent." , Toast.LENGTH_SHORT).show();
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(EmailVerify.this,
                     "There is no email client installed.", Toast.LENGTH_SHORT).show();
@@ -107,6 +105,7 @@ public class EmailVerify extends AppCompatActivity {
         String name = getIntent().getStringExtra("name");
         String code = getIntent().getStringExtra("code");
 
+        //int code2 = Integer.parseInt(code);
         //sendEmail(code);
 
         /****************************************************************************
@@ -150,59 +149,60 @@ public class EmailVerify extends AppCompatActivity {
                 }
                 //if(enteredCode.equals("" + code))
                 //{
-                    Handler handler = new Handler(Looper.getMainLooper());
+                Handler handler = new Handler(Looper.getMainLooper());
                 String finalClassification = classification;
                 handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            //Starting Write and Read data with URL
-                            //Creating array for parameters
-                            String[] field = new String[7];
-                            field[0] = "email";
-                            field[1] = "password";
-                            field[2] = "name";
-                            field[3] = "classification";
-                            field[4] = "picture";
-                            field[5] = "attendance";
-                            field[6] = "quizzes";
-                            //Creating array for data
-                            String[] data = new String[7];
-                            data[0] = email;
-                            data[1] = finalPassword;
-                            data[2] = name;
-                            data[3] = finalClassification;
-                            data[4] = "";
-                            data[5] = "0";
-                            data[6] = "0";
+                    @Override
+                    public void run() {
+                        //Starting Write and Read data with URL
+                        //Creating array for parameters
+                        String[] field = new String[7];
+                        field[0] = "email";
+                        field[1] = "password";
+                        field[2] = "name";
+                        field[3] = "classification";
+                        field[4] = "picture";
+                        field[5] = "attendance";
+                        field[6] = "quizzes";
+                        //Creating array for data
+                        String[] data = new String[7];
+                        data[0] = email;
+                        data[1] = finalPassword;
+                        data[2] = name;
+                        data[3] = finalClassification;
+                        data[4] = "";
+                        data[5] = "0";
+                        data[6] = "0";
+                        //"http://192.168.1.11/LoginRegister/signup.php" -- Ladelle
+                        //"http://192.168.1.138/LoginRegister/signup.php" --Mika
+                        PutData putData = new PutData("http://192.168.1.11/LoginRegister/signup.php", "POST", field, data);
+                        if (putData.startPut()) {
+                            if (putData.onComplete()) {
+                                String result = putData.getResult();
+                                if(result.equals("Sign Up Success"))
+                                {
+                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
-                            PutData putData = new PutData("http://192.168.1.138/LoginRegister/signup.php", "POST", field, data);
-                            if (putData.startPut()) {
-                                if (putData.onComplete()) {
-                                    String result = putData.getResult();
-                                    if(result.equals("Sign Up Success"))
+                                    //Check to see if teacher
+                                    if(finalClassification.equals("teacher"))
                                     {
-                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-
-                                        //Check to see if teacher
-                                        if(finalClassification.equals("teacher"))
-                                        {
-                                            openMainTeacher();
-                                        }
-                                        else
-                                        {
-                                            openMainStudent();
-                                        }
-                                        finish();
+                                        openMainTeacher();
                                     }
                                     else
                                     {
-                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                        openMainStudent();
                                     }
+                                    finish();
+                                }
+                                else
+                                {
+                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                 }
                             }
-                            //End Write and Read data with URL
                         }
-                    });
+                        //End Write and Read data with URL
+                    }
+                });
                 //}
             }
         });

@@ -9,14 +9,12 @@ package com.example.teacherspet.teacher_view.lessons;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.teacherspet.R;
 import com.example.teacherspet.student_view.Lessons_Student_View;
-import com.example.teacherspet.student_view.skills_check.SC_Algorithms;
 
 /************************************************************************
  * IMPORTS :

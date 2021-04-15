@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         //final ProgressBar loadingProgressBar = findViewById(R.id.loading);
-        final Button signupButton = findViewById(R.id.signup);
+        final Button signupButton = findViewById(R.id.signupbttn);
         final Button forgetpasswordButton = findViewById(R.id.forgetpsw);
 
 
@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                     classification = "student";
                 }
                 //if(enteredCode.equals("" + code))
-                //{
+               // {
                 Handler handler = new Handler(Looper.getMainLooper());
                 String finalClassification = classification;
                 handler.post(new Runnable() {
@@ -116,8 +116,9 @@ public class LoginActivity extends AppCompatActivity {
                         String[] data = new String[2];
                         data[0] = email;
                         data[1] = finalPassword;
-
-                        PutData putData = new PutData("http://192.168.1.138/LoginRegister/login.php", "POST", field, data);
+                        //"http://172.27.176.1/LoginRegister/signup.php" -- Ladelle
+                        //"http://192.168.1.138/LoginRegister/signup.php" --Mika
+                        PutData putData = new PutData("http://192.168.1.11/LoginRegister/login.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

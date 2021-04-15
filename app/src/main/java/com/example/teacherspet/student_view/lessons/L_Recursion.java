@@ -22,10 +22,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.teacherspet.R;
-import com.example.teacherspet.student_view.Attendance_Student_View;
 import com.example.teacherspet.student_view.Lessons_Student_View;
-import com.example.teacherspet.student_view.Progress_Student_View;
-import com.example.teacherspet.student_view.Self_Study_Student_View;
 
 public class L_Recursion extends AppCompatActivity {
 

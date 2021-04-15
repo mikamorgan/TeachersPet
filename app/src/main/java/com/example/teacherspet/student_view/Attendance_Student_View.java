@@ -6,11 +6,14 @@ package com.example.teacherspet.student_view;
  *
 
  ************************************************************************/
+
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -44,6 +47,7 @@ public class Attendance_Student_View extends AppCompatActivity {
         btScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // getIntent().putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", "QR_CODE_MODE");
                 // Intitalize intent integrator
                 IntentIntegrator intentIntegrator = new IntentIntegrator(
                         Attendance_Student_View.this
@@ -56,8 +60,11 @@ public class Attendance_Student_View extends AppCompatActivity {
                 intentIntegrator.setOrientationLocked(true);
                 //set Capture activity
                 intentIntegrator.setCaptureActivity(Capture.class);
-                // intiiate scan
-                intentIntegrator.initiateScan();
+
+                // intitiate scan
+                intentIntegrator.initiateScan(IntentIntegrator.ALL_CODE_TYPES);
+
+
             }
         });
     }
@@ -65,20 +72,29 @@ public class Attendance_Student_View extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         // Initialize intent result
-        IntentResult intentResult = IntentIntegrator.parseActivityResult(
+        IntentResult result = IntentIntegrator.parseActivityResult(
                 requestCode, resultCode, data
         );
         //check condition
-        if (intentResult.getContents() != null) {
+        if (result.getContents() != null) {
             //when result content is not null
+            String resultContents = result.getContents();
             // Intialize alert dialog
             AlertDialog.Builder builder = new AlertDialog.Builder(
                     Attendance_Student_View.this
             );
+            String results = result.getContents();
+            if (Patterns.WEB_URL.matcher(results).matches()) {
+                // Open URL
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(results));
+                startActivity(browserIntent);
+            }else{
+                Toast.makeText(this, "Not Match", Toast.LENGTH_LONG).show();
+            }
             // set title
             builder.setTitle("Result");
             //set message
-            builder.setMessage(intentResult.getContents());
+            // builder.setMessage(result.getContents());
             //Set positive button
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
@@ -89,14 +105,18 @@ public class Attendance_Student_View extends AppCompatActivity {
             });
             //show alert dialog
             builder.show();
+
             fetchDB();
-        } else {
+        } else
+        {
             // when result content is null
             // Display toasty
             Toast.makeText(getApplicationContext(), "OOOPS... You did not scan anything", Toast.LENGTH_SHORT)
                     .show();
 
         }
+
+
     }
 
     private void fetchDB(){
@@ -113,8 +133,9 @@ public class Attendance_Student_View extends AppCompatActivity {
                 //Creating array for data
                 String[] data = new String[1];
                 data[0] = email;
-
-                PutData putData = new PutData("http://192.168.1.138/LoginRegister/fetchattendance.php", "POST", field, data);
+                //"http://192.168.1.11/LoginRegister/signup.php" -- Ladelle
+                //"http://192.168.1.138/LoginRegister/signup.php" --Mika
+                PutData putData = new PutData("http://192.168.1.11/LoginRegister/fetchattendance.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();
@@ -145,8 +166,9 @@ public class Attendance_Student_View extends AppCompatActivity {
                 String[] data = new String[2];
                 data[0] = email;
                 data[1] = updatedAttendanceCount;
-
-                PutData putData = new PutData("http://192.168.1.138/LoginRegister/updateattendance.php", "POST", field, data);
+                                            //"http://192.168.1.11/LoginRegister/signup.php" -- Ladelle
+                                            // "http://192.168.1.138/LoginRegister/signup.php" --Mika
+                PutData putData = new PutData("http://http://192.168.1.11/LoginRegister/updateattendance.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teacher_view.StudentList_Teacher_View">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/teacher_studentlist_view_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/stud1"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="148dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.735"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65"
+
+                android:clickable="true"
+                />
+
+
+            <ImageView
+                android:id="@+id/stud1img"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:background="#EDEC0C0C"
+                app:layout_constraintEnd_toStartOf="@+id/stud1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/personicon_bg" />
+
+            <TextView
+                android:id="@+id/stud2"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="232dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.73"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <ImageView
+                android:id="@+id/stud2img"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginRight="34dp"
+                android:background="#EDEC0C0C"
+                app:layout_constraintEnd_toStartOf="@+id/stud2"
+                app:layout_constraintTop_toBottomOf="@+id/stud1img"
+                app:srcCompat="@drawable/personicon_bg" />
+
+            <TextView
+                android:id="@+id/stud3"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="320dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.744"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <ImageView
+                android:id="@+id/stud3img"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:background="#FFC107"
+                app:layout_constraintEnd_toStartOf="@+id/stud3"
+                app:layout_constraintTop_toBottomOf="@+id/stud2img"
+                app:srcCompat="@drawable/personicon_bg" />
+
+            <TextView
+                android:id="@+id/stud4"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="412dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.773"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <ImageView
+                android:id="@+id/stud4img"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:background="#0DBC14"
+                app:layout_constraintEnd_toStartOf="@+id/stud4"
+                app:layout_constraintTop_toBottomOf="@+id/stud3img"
+                app:srcCompat="@drawable/personicon_bg" />
+
+            <TextView
+                android:id="@+id/stud5"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="512dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <ImageView
+                android:id="@+id/stud5img"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="39dp"
+                android:layout_marginRight="39dp"
+                android:background="#0DBC14"
+                app:layout_constraintEnd_toStartOf="@+id/stud5"
+                app:layout_constraintTop_toBottomOf="@+id/stud4img"
+                app:srcCompat="@drawable/personicon_bg" />
+
+            <TextView
+                android:id="@+id/stud6"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="608dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <ImageView
+                android:id="@+id/stud6img"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:background="#0DBC14"
+                app:layout_constraintEnd_toStartOf="@+id/stud6"
+                app:layout_constraintTop_toBottomOf="@+id/stud5img"
+                app:srcCompat="@drawable/personicon_bg" />
+
+            <TextView
+                android:id="@+id/stud7"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="696dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.773"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <TextView
+                android:id="@+id/stud8"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="804dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/attendance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

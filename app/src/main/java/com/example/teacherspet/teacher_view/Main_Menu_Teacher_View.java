@@ -74,8 +74,9 @@ public class Main_Menu_Teacher_View extends AppCompatActivity {
         final Button self_studyButton = findViewById(R.id.self_study);
         final Button progressButton = findViewById(R.id.progress);
 
-        //Create text view box to hold teacher name
-        TextView name = (TextView) findViewById(R.id.name);
+        //Create text view box to hold TEACHER name
+        TextView tname = (TextView) findViewById(R.id.name);
+        tname.setText("Mika Morgan");
         fetchDB();
 
         /****************************************************************************

@@ -4,6 +4,192 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/teacherview_attendance_coursehome_bg"
     tools:context=".teacher_view.Attendance_Teacher_View">
 
+    <TextView
+        android:id="@+id/currtime"
+        android:layout_width="119dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="368dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/curroccupy"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="388dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/todayis"
+        android:layout_width="139dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="340dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/maxoccupy"
+        android:layout_width="114dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="292dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="108dp"
+        android:gravity="center"
+        android:text="TextView"
+
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/coursename"
+        android:layout_width="230dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="164dp"
+        android:gravity="center"
+        android:text="TextView"
+
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/courseroom"
+        android:layout_width="230dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="196dp"
+        android:gravity="center"
+        android:text="TextView"
+
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/coursedate"
+        android:layout_width="230dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="228dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/coursetimea"
+        android:layout_width="230dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="260dp"
+        android:gravity="center"
+        android:text="TextView"
+
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/attendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <Button
+        android:id="@+id/courseview_bt"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="287dp"
+        android:layout_marginRight="287dp"
+        android:layout_marginBottom="234dp"
+        android:alpha="0"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coursetimea" />
+
+
+    <Button
+        android:id="@+id/studentlist_bt"
+        android:layout_width="110dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="235dp"
+        android:alpha="0"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time_bt"
+        app:layout_constraintStart_toEndOf="@+id/courseview_bt"
+        app:layout_constraintTop_toBottomOf="@+id/currtime" />
+
+    <Button
+        android:id="@+id/time_bt"
+        android:layout_width="110dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="232dp"
+        android:alpha="0"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

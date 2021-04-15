@@ -4,7 +4,6 @@ package com.example.teacherspet.ui.login;
  *          imports the bundle packages for the buttons UI interaction
  *          of the app.
  *
-
  ************************************************************************/
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,6 +44,7 @@ public class SignUpUserView extends AppCompatActivity {
         intent.putExtra("password", password);
         intent.putExtra("name", name);
         intent.putExtra("code", code);
+       // intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // ADDED THIS
         startActivity(intent);
     }
 
@@ -53,10 +53,10 @@ public class SignUpUserView extends AppCompatActivity {
         Random rand = new Random();
         int code = rand.nextInt(1000);
 
-        String[] TO = {"mmorgan@archercityisd.net"};
+        String[] TO = {"ladelle2016@gmail.com"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
+        emailIntent.setData(Uri.parse("mailto:")); //"mailto:ladelle2016@gmail.com
+       // emailIntent.setType("text/plain");
 
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
@@ -89,7 +89,7 @@ public class SignUpUserView extends AppCompatActivity {
         EditText passwordverifyEditText = findViewById(R.id.editTextTextPassword2);
 
         final Button loginButton = findViewById(R.id.login);
-        final Button emailverifyButton = findViewById(R.id.signup); // inside on create
+        final Button emailverifyButton = findViewById(R.id.signupbttn); // inside on create
 
         /****************************************************************************
          *  OnClickListener checks to see if a button is pressed
